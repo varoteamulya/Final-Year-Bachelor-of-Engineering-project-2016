@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip" 
+   >
+   
+	<TextView 
+	    android:id="@+id/d_DateTextView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="26dip"
+	    android:layout_alignLeft="@+id/d_AddressTextView"
+	    android:layout_below="@+id/d_AddressTextView"
+	    android:layout_toLeftOf="@+id/d_RecordTextView"
+	    android:ellipsize="marquee"
+	    android:singleLine="true"
+	    android:text="Date"
+	    android:textSize="12sp"
+	    />
+    <TextView
+        android:id="@+id/d_AddressTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/d_NameTextView"
+        android:layout_below="@+id/d_NameTextView"
+        android:layout_alignRight="@+id/d_NameTextView"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Protocol Type"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/d_NameTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toLeftOf="@+id/d_RecordTextView"
+        android:layout_toRightOf="@+id/bluetoothDeviceImage"
+        android:gravity="center_vertical"
+        android:text="Name"
+        android:textSize="16sp" />
+
+  <TextView
+      android:id="@+id/d_RecordTextView"
+      style="@style/RelativeLayoutStyle"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_alignParentRight="true"
+      android:layout_alignTop="@+id/d_NameTextView"
+      android:layout_alignWithParentIfMissing="true"
+      android:layout_marginRight="5dp"
+      android:gravity="center"
+      android:text="1 New Record"
+      android:textSize="12sp" />
+  
+   <ImageView
+        android:id="@+id/bluetoothDeviceImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="fitCenter"
+        android:layout_margin="3dp"
+        android:src="@drawable/weight" />
+</RelativeLayout>

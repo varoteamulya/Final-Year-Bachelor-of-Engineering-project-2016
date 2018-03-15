@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="brodcast_values">
+        <item><span id="zw2242c82_4" class="zw2242c82">0</span></item>
+        <item><span id="zw2242c82_4" class="zw2242c82">1</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">2</span></item>
+    </string-array>
+    <string-array name="brodcast_name">
+        <item><span id="zw2242c82_4" class="zw2242c82">正常广播</span></item>
+        <item><span id="zw2242c82_4" class="zw2242c82">配对广播</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">所有广播</span></item>
+    </string-array>
+    <string-array name="type_name">
+        <item><span id="zw2242c82_4" class="zw2242c82">血压计(A2/A3)</span></item>
+        <item><span id="zw2242c82_4" class="zw2242c82">体重秤(A2)</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">计步器(A2)</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">脂肪秤(A3)</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">厨房秤(A2)</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">身高尺(A2)</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">血糖仪</span></item>
+    </string-array>
+    <string-array name="type_value">
+        <item><span id="zw2242c82_4" class="zw2242c82">0</span></item>
+        <item><span id="zw2242c82_4" class="zw2242c82">1</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">2</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">3</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">4</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">5</span></item>
+        <item><span id="zw2242c82_1" class="zw2242c82">6</span></item>
+    </string-array>
+
+</resources>

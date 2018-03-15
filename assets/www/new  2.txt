@@ -1,0 +1,12 @@
+img----style="position:absolute;top:78px;left:250px;width:100px;height:100px;"
+name----style="position:absolute;top:86px;left:380px;"
+edit----style="position:absolute;top:86px;left:800px;" href="./edit.html"  rel="external" data-role="button" data-inline="true" data-mini="true"  >Edit Profile</a>
+gender----style="position:absolute;top:120px;left:380px;"
+ptc-----style="position:absolute;top:74px;left:950px;"
+div----style="position:absolute;top:86px;left:950px;"
+
+
+
+home-history
+<a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+	<a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>

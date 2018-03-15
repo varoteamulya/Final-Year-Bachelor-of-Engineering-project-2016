@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+	
+	    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>mhealth</title>
+		<script src="./js/jquery-1.7.1.min.js"></script>
+	     
+		<script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+
+		<link rel="stylesheet" href="./js/jquery.mobile-1.3.2.min.css" />
+	    <script src="./js/jquery.mobile-1.3.2.min.js"></script>
+   
+	
+	</head>
+	
+    <body>
+	<!--This consists of login ,sign up and help  module-->
+     <div data-role="page" >	
+       <div data-role="header" class="ui-header ui-bar-b" role="banner">
+	       		<font size="3">
+	       			<center>
+	       				<h2>mHealth Sign In</h2>
+	       			</center>
+	       		</font>
+	    </div><!-- /header -->
+       
+       <div data-role="content">
+			
+					<center><h2 style="border-top: 1px solid #ccc;"><span class="home_collapsible_logo home_collapsible_login">&nbsp;</span>Patient Log In</h2></center>
+						<!--Login Form-->
+					
+						<div class="patuidpage" >
+						 <form>
+								<table border="0" width="60%" align="center" >	
+								<tr >
+								<th>
+							     <div data-role="fieldcontain">
+							     	<label style="font-size: 18px;">UserName:</label>
+								</th>
+								<td  width="80%">
+								<input class="lname" type="text" name="emailid" id="emailid" placeholder="Patient Email ID"/>
+             					</div>
+							 </td>
+				             </tr>
+							 <tr>
+							<th>
+				             <div data-role="fieldcontain">
+				             <label style="font-size: 18px;">Password:</label>
+							 </th>
+							<th>
+							 <input class="lname" type="password" name="password" id="password" placeholder="Password" />
+				             </div>
+							 </th>
+							 </tr>
+							 <tr>
+							
+							 <th>
+							 <center>
+							  <input class="button" type="button" id="pat_back" onclick="javascript:location.href='login.html'" value="    Back    " data-inline="true" rel="external" name="pat_back" />
+							
+								 </th>	
+									
+								<th>
+	
+								 <input class="button" type="button" id="pat_signin" value="    Sign In    " data-inline="true" rel="external" name="pat_signin"/>
+							 </center>
+								 </th>	
+								 </tr>
+								</table>
+						     <div class="ui-grid-solo">
+				              <div class="ui-block-b">
+					          </div>
+				             </div>
+
+						</form>
+	                </div>
+				  
+		</div><br/>
+			
+	</div>
+		
+	</body>
+	<script type="text/javascript" charset="utf-8">
+	  
+     	var DB_VERSION = "1.0";
+		var DB_NAME = "Database";
+		var DB_DISPLAY_NAME = "Cordova Demo";
+		var DB_SIZE = 20000;
+		var DEBUG=true;
+		 var db;
+		
+        var valid=true;
+      // Wait for Cordova to load
+ //   document.addEventListener("deviceready", onDeviceReady, false);
+
+     // Cordova is ready
+	    function onConfirmQuit(button){
+       if(button == "1"){
+      window.CustomNativeAccess.exitapp();
+    }
+  }
+  
+ //   function onDeviceReady() {
+ // on device ready database is connected where all the information of user is stored
+	db=window.openDatabase (DB_NAME, DB_VERSION, DB_DISPLAY_NAME, DB_SIZE);
+	
+  $(document).ready(function(){   		
+		
+		//this is used to quit the application
+ document.addEventListener("backbutton", function () { 
+              navigator.notification.confirm(
+                        'Do you want to quit', 
+                        onConfirmQuit, 
+                        'Exit Application', 
+                        'OK,Cancel'  
+                    );
+            }, true); 
+		
+     });
+   
+	 
+   
+     $("#pat_signin").live('click', function(){
+         valid=true;
+       var emaili=document.getElementById('emailid').value;
+        var passwi=document.getElementById('password').value;
+       if(emaili=="") {valid=false;}
+		if(passwi=="") {valid=false;}
+		if(valid==true)
+        db.transaction(search, errorCB, successCB);
+		else
+		alert("Enter both user name and password..");
+     });
+       //it consists of query used to search the database
+     function search(tx) {
+        var emaili=document.getElementById('emailid').value;
+        var passwi=document.getElementById('password').value;
+        tx.executeSql('SELECT * FROM DETAILS_PATIENT where patemail="'+emaili+'"', [], querySuccess, errorCB);
+     }
+
+     
+     // execution of success of function search 
+    //
+     function querySuccess(tx, results) {
+        var len = results.rows.length;				//gives number of lines  
+        if(len!=0)
+        {
+          var emailp=document.getElementById('emailid').value; 
+		  var email;															// in case of user enters proper password
+		  var passwrd;
+		  var id;
+		//  alert("query success");
+          email=results.rows.item(0).patemail;
+	      passwrd=results.rows.item(0).pwd; 
+	      id=results.rows.item(0).id;
+		  var passwi=document.getElementById('password').value;		  
+		  if(passwi==passwrd){
+		  	  window.localStorage.setItem("id",id);
+			  window.localStorage.setItem("patemail",email);
+			  window.localStorage.setItem("pwd",passwrd);
+			  window.localStorage.setItem("user_type","patient");
+			  document.location.href = "./PatientProfileView.html";
+		  }
+		  else
+		  alert("Incorrect Password!!!");
+		  //document.location.href = "./combined.html";
+		}
+	   else{
+	   		alert("Authentication Failed.");
+	   		document.getElementById('emailid').value
+	   		document.getElementById('password').value
+	   }
+     }
+	 
+     // Transaction success callback
+     //
+     function successCB() {     
+        
+     }
+
+     // on Error it returns the error code
+     function errorCB(err) {
+       
+      console.log("Error processing SQL: "+err.code);
+	  //alert("error1");
+     }
+	  
+    </script>	
+</html>
+

@@ -1,0 +1,25 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+
+    
+     <style name="RelativeLayoutStyle">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:animateOnClick">true</item>
+        <item name="android:background">@drawable/rectangle</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

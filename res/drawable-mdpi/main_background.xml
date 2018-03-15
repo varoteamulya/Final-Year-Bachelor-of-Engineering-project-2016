@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 基础按钮背景颜色点击后 -->
+    <corners android:radius="5dip"/>
+    <solid android:color="#82D5E0"/>
+</shape>

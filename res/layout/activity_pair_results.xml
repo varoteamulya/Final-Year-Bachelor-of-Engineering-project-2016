@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp" >
+
+        <!-- title -->
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Paired devices"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dp"
+            android:onClick="doClick"
+            android:src="@drawable/back_button_selector" />
+        <!-- divider -->
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:background="#DADADC" >
+        </View>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+   
+      <TextView
+          android:id="@+id/pairResultsView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_above="@+id/saveBtn"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:layout_margin="8dp"
+          android:background="#ffffff"
+          android:fastScrollEnabled="true"
+          android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignLeft="@+id/pairResultsView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/pairResultsView"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_single_button"
+            android:textColor="@drawable/selector_single_button_text"  
+            android:layout_margin="15dp"
+            android:onClick="doClick"
+            android:text="Save" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/pairResultsView"
+            android:layout_margin="5dp"
+            android:background="#DADADC" />
+   
+</RelativeLayout>
+</LinearLayout>

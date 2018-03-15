@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主体背景颜色 -->
+    <color name="main_background_color">#FFFFFFFF</color>
+    <!-- 无主体背景颜色 -->
+    <color name="main_no_background_color">#F4F3F2</color>
+    <!-- 标题栏颜色 -->
+    <color name="main_title_bar_color">#51C4D4</color>
+    <!-- 标题栏字体颜色 -->
+    <color name="main_title_text_color">#FFFFFFFF</color>
+    <!-- 输入框提示字体颜色 -->
+    <color name="text_prompt_color">#BFC2CD</color>
+    <!-- 分割线颜色 -->
+    <color name="dividing_line_color">#DBDBDB</color>
+    <!-- weibo登录背景颜色 -->
+    <color name="weibo_login_color">#E89382</color>
+    <!-- qq登录背景颜色 -->
+    <color name="qq_login_color">#51C4D4</color>
+
+    <!-- 提示框背景颜色 -->
+    <color name="dialog_background_normal_color">#FFFFFFFF</color>
+    <!-- 提示框外部背景颜色 -->
+    <!-- <color name="dialog_external_background_color">#FFFFFFFF</color> -->
+    <!-- 提示框按钮点击后背景颜色 -->
+    <color name="dialog_background_color">#D9D9DC</color>
+    <!-- 提示框字体颜色 -->
+    <color name="dialog_text_color">#FF000000</color>
+    <!-- 提示框按钮边框颜色 -->
+    <color name="dialog_stroke_color">#D9D9DC</color>
+    <!-- 提示框按钮字体颜色 -->
+    <color name="dialog_button_text_color">#51C4D4</color>
+
+    <!-- 注册地区选项背景颜色 -->
+    <color name="registration_dividing_line_color">#00000000</color>
+    <!-- 特殊文本背景颜色 -->
+    <color name="special_text_color">#51C4D4</color>
+
+    <!-- 主页选择文本颜色 -->
+    <color name="main_text_normal_color">#8ED171</color>
+    <!-- 主页消息提示框颜色 -->
+    <color name="main_message_color">#7F7F7F</color>
+    <!-- 主页未选择文本颜色 -->
+    <color name="main_text_color">#A8ACBB</color>
+    <!-- 主页图表选择项颜色 -->
+    <color name="main_chart_title_color">#FFFFFFFF</color>
+    <!-- 主页图表选择项边框颜色 -->
+    <color name="main_chart_title_bar_bt">#51C4D4</color>
+    <!-- 侧边栏背景颜色 -->
+    <color name="main_sidebar_background_color">#F4F3F2</color>
+    <!-- 数据列表时间段字体颜色 -->
+    <color name="data_list_text_color">#FFFFFFFF</color>
+    <!-- 设备绑定用户显示背景颜色 -->
+    <color name="device_binding_user_color">#BAE8EF</color>
+    <!-- 添加设备按钮字体颜色 -->
+    <color name="device_list_add_text_normal_color">#4EC4D0</color>
+    <!-- 添加设备按钮字体颜色 -->
+    <color name="device_list_add_text_color">#047A86</color>
+    <!-- 用户属性字体颜色 -->
+    <color name="user_attribute_text_color">#50C5D2</color>
+    <!-- 二维码需要颜色 -->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <!-- 电量颜色 -->
+    <color name="electricity_background_color">#ECECEC</color>
+    <color name="electricity_cover_color">#BAE8EF</color>
+    <color name="electricity_cover2_color">#74D1DE</color>
+    <!-- 主页文本 normal -->
+    <color name="main_text_normal">#818282</color>
+    <!-- 主页文本 disable -->
+    <color name="main_text_disable">#a8a8ad</color>
+    <!-- 主页文本 pressed -->
+    <color name="main_text_">#a9d066</color>
+
+    <!-- wheel -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#98D8E9</color>
+    <color name="wheel_text_color">#BFC2CD</color>
+    <color name="black">#FF000000</color>
+    <color name="title_color">#FF1F2224</color>
+    <!-- 闹钟 -->
+    <color name="next_clock_cue_color">#51C4D4</color>
+
+    <!-- 睡眠 -->
+    <color name="sleep_good">#b0da68</color>
+    <color name="sleep_normal">#91c8ed</color>
+    <color name="sleep_bad">#ed756e</color>
+
+</resources>

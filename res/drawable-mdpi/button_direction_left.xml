@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 返回键按钮 -->
+    <item android:drawable="@drawable/direction_left" android:state_selected="true"/>
+    <item android:drawable="@drawable/direction_left" android:state_focused="true"/>
+    <item android:drawable="@drawable/direction_left" android:state_pressed="true"/>
+    <item android:drawable="@drawable/direction_left_normal"/>
+
+</selector>

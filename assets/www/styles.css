@@ -1,0 +1,72 @@
+html, body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #565656;
+}
+
+
+.line
+{
+    background-color: #707070;
+    height: 5px;
+    margin: 0 0 50px;
+	width: 150px;
+}
+.title
+{
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 950px;
+}
+.bs
+{
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto;
+    padding: 0 50px;
+    width: 950px;
+}
+    .title h1,
+    .title h2
+    {
+        display: inline;
+        font-size: 30px;
+        color: #565656;
+        text-transform: none;
+    }
+
+.pane
+{
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    text-align: center;
+    width: 60%;
+    height: 80%;
+   // padding: 50px;
+    margin: 0 auto;
+    box-shadow: 0px 1px 3px 0px #e3e3e3;
+    box-shadow: 0px 1px 3px 0px rgba(112,112,112,0.05);
+}
+.pane1
+{
+    position: relative;
+    //background-color: #ffffff;
+    //border: 1px solid #cfcfcf;
+    //border-radius: 3px;
+    text-align: center;
+    width: 40%;
+     height:80%;
+    min-height:auto;
+    //padding: 50px;
+    margin: 0 auto;
+    //box-shadow: 0px 1px 3px 0px #e3e3e3;
+    //box-shadow: 0px 1px 3px 0px rgba(112,112,112,0.05);
+}

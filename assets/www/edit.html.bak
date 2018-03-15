@@ -1,0 +1,546 @@
+<html>
+ <head>
+    <title>mHealth..</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./js/jquery.mobile-1.3.2.min.css" />
+	
+	
+   </head>
+   <body onload="startedit()">
+
+
+
+     <!--        new page second page  -->
+     <div  data-role="page" id="page2">
+		<div data-role="header" data-theme="b">
+		<a href="#" data-rel="back" data-icon="back" data-iconpos="notext">Back</a>
+		<h1>Edit your details</h1>
+     </div>
+
+	 <div data-role="content">
+		<center><img class="home_initial_header_img" src="" alt="" /></center>
+		<form class="sign_up_form" name="mobile_signup" id="mobile_signup_form" action="#page3" method="post" data-ajax="false" novalidate="novalidate">
+				<!--<div>
+					<a href="#" data-role="button" id="imgsubmit" name="imgsubmit" data-mini="true" rel="external" data-inline="true"><img id="myimage" style="height:200px;width:200px;" src="./images/image.jpg" /></a>
+				</div>-->
+			 <form>
+			<table border="0" width="70%" >	
+			<tr >
+			<th align="left">
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 3%;padding-top: 200px; font-size: 18px;"><b>First Name:</b></label></th><td  width="80%">
+			  <input class="fname" type="text" name="fname" id="fname" value="" required aria-required="true" /></td><td>
+			  <label id="fnmark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div></td></tr>
+			  <tr><th align="left">			  
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 1.5%;padding-top: 200px; font-size: 18px;"><b>Middle Name:</b></label></th><td  width="80%">
+			  <input class="mname" type="text" name="mname" id="mname" value="" required aria-required="true" /></td><td>
+			  <label id="mnmark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div></td></tr>
+			  <tr><th align="left">			  
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 3%;padding-top: 200px; font-size: 18px;"><b>Last Name:</b></label></th><td>
+			  <input class="lname" type="text" name="lname" id="lname"/></td><td>
+			  <label id="lnmark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div></td></tr>
+			  
+			 <tr><th align="left" colspan=3>
+			  <fieldset data-role="controlgroup" data-type="horizontal">
+				  <input type="radio" name="radio-choice" id="gender" value="Male" />
+				  <label for="gender">Male</label>
+				  <input type="radio" name="radio-choice" id="gender1" value="Female"  />
+				  <label for="gender1">Female</label>
+			  </fieldset></th></tr>
+				 
+				 <tr><th align="left">
+			  <div data-role="fieldcontain">
+				   <label for="date" style="padding-right: 1%;padding-top: 200px; font-size: 18px;"><b>Enter Birthdate</b></label></th><td>
+				  <input type="date" name="date" data-mini="true" id="dob" value="" /></td><td>
+			  <label id="dobmark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div>
+			  </td></tr>
+					<tr><th align="left">		
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 3%;padding-top: 200px; font-size: 18px;"><b>Contact Number:</b></label></th><td>
+			   <input class="pno" type="text" name="pcontactno" id="pcontactno" value="" required aria-required="true" /></td><td>
+			   <label id="pcnomark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div></td></tr>
+			   <tr>
+			  <th align="left">			  
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 3%;padding-top: 200px; font-size: 17px;"><b>Patient Email ID:</b></label></th>
+			  <td  width="80%">
+			   <input class="sno" type="text" name="patemail" id="patemail" value="" required aria-required="true" /></td><td>
+			   <label id="patemailmark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div>
+
+			  </td>
+			  </tr>
+
+			  <tr>
+			  <th align="left">			  
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 3%;padding-top: 200px; font-size: 17px;"><b>Old Password:</b></label>
+			  </th>
+			  <td  width="80%">
+			   <input class="sno" type="password" name="patpass" id="patpass" value="" required aria-required="true" /></td><td>
+			   <label id="patpassmark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div>
+
+			  </td>
+			  </tr>
+
+			   <tr>
+			  <th align="left">			  
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 3%;padding-top: 200px; font-size: 17px;"><b>New Password:</b></label>
+			  </th>
+			  <td  width="80%">
+			   <input class="sno" type="password" name="patcpass" id="patcpass" value="" required aria-required="true" /></td><td>
+			   <label id="patcpassmark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div>
+
+			  </td>
+			  </tr>
+
+			  <tr>
+			  <th align="left">			  
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 3%;padding-top: 200px; font-size: 17px;"><b>Doctor Name:</b></label></th>
+			  <td  width="80%">
+			   <input class="sno" type="text" name="docname" id="docname" value="" required aria-required="true" /></td><td>
+			   <label id="docnamemark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div>
+			  
+			  </td>
+			  </tr>
+			  <tr>
+			  <th align="left">			  
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 3%;padding-top: 200px; font-size: 17px;"><b>Doctor Email ID:</b></label></th>
+			  <td  width="80%">
+			   <input class="sno" type="text" name="docemail" id="docemail" value="" required aria-required="true" /></td><td>
+			   <label id="docemailmark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div>
+			  
+			  </td>
+			  </tr>
+			  <tr>
+			  <th align="left">			  
+			  <div data-role="fieldcontain">					
+			  <label style="padding-right: 3%;padding-top: 200px; font-size: 17px;"><b>Doctor Mobile No:</b></label></th>
+			  <td  width="80%">
+			   <input class="sno" type="text" name="docmob" id="docmob" value="" required aria-required="true" /></td><td>
+			   <label id="docmobmark" style="padding-right: 3%;padding-top: 200px;visibility: hidden; font-size: 30px;"><font color="red"><b> *</b></font></label>
+			  </div>			  
+			  </td>
+			  </tr>
+			  <tr><th>
+			  <!-- <a href="./AdminPatientLogin.html" data-role="button" data-mini="true" rel="external" data-inline="true">Cancel</a>-->
+			  <a href="#" data-rel="back" data-role="button"  rel="external" data-inline="true">Back</a>
+		 </th><td>
+			  <input  rel="external" class="button" type="button" data-inline="true" value="Save Changes" id="edit_submit" name="edit_submit"  />
+			</td><tr>
+     </form>
+     </div>
+	 
+	 <div data-theme=b data-role="footer" data-id="foo1" data-position="fixed">
+		<h4>Š HiWi Communications Pvt. Ltd</h4> 
+	</div><!-- /footer --> 
+   </div>
+  </body>
+   <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+	<script src="./js/jquery-1.7.1.min.js"></script>
+	<script src="./js/jquery.mobile-1.3.2.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+	
+		var DB_VERSION = "1.0";
+		var DB_NAME = "Database";
+		var DB_DISPLAY_NAME = "Cordova Demo";
+		var DB_SIZE = 20000;
+		var DEBUG=true;
+		var db=window.openDatabase (DB_NAME, DB_VERSION, DB_DISPLAY_NAME, DB_SIZE);
+	
+	 	document.addEventListener("deviceready", onDeviceReady, false);
+		var imgdata;
+			
+		/*$("#imgsubmit").live('click', function(){
+		// Take picture using device camera and retrieve image as base64-encoded string
+		navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 10,
+		destinationType: destinationType.DATA_URL });
+		});*/
+		 
+			var pictureSource;   // picture source
+			var destinationType; // sets the format of returned value 
+	
+	function onDeviceReady() {
+	document.addEventListener("backbutton", function () { 
+              navigator.notification.confirm(
+                        'Do you want to quit', 
+                        onConfirmQuit, 
+                        'Exit Application', 
+                        'OK,Cancel'  
+                    );
+            }, true); 
+	// $(document).ready(function(){  
+			//pictureSource=navigator.camera.PictureSourceType;
+			//destinationType=navigator.camera.DestinationType;
+		}//);
+
+		 function onConfirmQuit(button){
+       if(button == "1"){
+     // window.CustomNativeAccess.exitapp(); PU 27 Nov 14
+    }
+	}
+		/*
+		// Called when a photo is successfully retrieved
+		//
+		function onPhotoDataSuccess(imageData) {
+		  // Uncomment to view the base64 encoded image data
+		  // console.log(imageData);
+
+		  // Get image handle
+		  //
+		  var smallImage = document.getElementById('myimage');
+
+		  // Unhide image elements
+		  //
+		  smallImage.style.display = 'block';
+
+		  // Show the captured photo
+		  // The inline CSS rules are used to resize the image
+		  //
+		  smallImage.src = "data:image/jpeg;base64," + imageData;
+		  //   imgdata=b64toBlob(imageData, "image/jpeg",8);
+		  imgdata=imageData;
+		  //database 
+		}
+		*/
+		
+		function onFail(message) {
+			//    alert('Failed because: ' + message);
+		}
+	
+	
+     $("#edit_submit").live('click', function(){
+     
+     
+       //var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+       valid=true;
+      //document.getElementById('fname').value=fname;
+       // document.getElementById('mname').value=mname;
+       // document.getElementById('lname').value=lname;
+      //  document.getElementById('gender').value=gender;
+      //  document.getElementById('dob').value=dob;
+      //  document.getElementById('pcontactno').value=pcontactno;
+      //  document.getElementById('scontactno').value=scontactno;
+     //  	var dbImage = document.getElementById('myimage');
+				var num=true;
+				var mail = true;
+				var pass=true;
+       			//var emailp=window.localStorage.getItem("email");
+			   	//var passwp=window.localStorage.getItem("password");
+			   	var fname=document.getElementById('fname').value
+        		var mname=document.getElementById('mname').value;
+        		var lname=document.getElementById('lname').value;
+				//var gender=document.getElementById('gender').value;
+				
+        		var gender;
+        		
+			   	if(document.getElementById('gender').checked) {
+ 					gender=document.getElementById('gender').value;
+				}else if(document.getElementById('gender1').checked) {
+ 					gender=document.getElementById('gender1').value;
+				}
+				
+        		var dob=document.getElementById('dob').value;
+        		var pcontactno=document.getElementById('pcontactno').value;
+        		var patemail=document.getElementById('patemail').value;
+        		var patpass=document.getElementById('patpass').value;
+			   var patcpass=document.getElementById('patcpass').value;
+			    var docname=document.getElementById('docname').value;
+			    var docemail=document.getElementById('docemail').value;
+			    var docmob=document.getElementById('docmob').value;
+				var preg= new RegExp("^[0-9]+$","g");
+				 if(!pcontactno.match(preg))
+			  {num=false;
+			  }
+			   var sreg= new RegExp("^[0-9]+$");
+			    if(!docmob.match(preg))
+			   {
+			   	num=false;
+			   }
+			   var emailreg= new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$","g");
+			   if(!patemail.match(emailreg))
+			   //else
+			   {
+			   	mail=false;
+			   	//alert("invalid pat");
+			   }
+
+			   if(window.localStorage.getItem("patpass")!=patpass)
+			   {
+			   	//alert(window.localStorage.getItem("patpass"));
+			   	pass=false;
+			   	alert("Old Password Invalid.");
+			   }
+
+			   if(patcpass.length<6)
+			   //else
+			   {
+			   	pass=false;
+			   	alert("Password must be minimum 6 characters in length.");
+			   }
+
+			   if(!docemail.match(emailreg))
+			   //else
+			   {
+			   	mail=false;
+			   	//alert("invalid doc");
+			   }
+				
+			   if(fname=="") {valid=false;document.getElementById("fnmark").style.visibility = "visible";} 
+			   else document.getElementById("fnmark").style.visibility = "hidden";
+			  
+			   if(lname=="") {valid=false;document.getElementById("lnmark").style.visibility = "visible";}
+			   else
+			   document.getElementById("lnmark").style.visibility = "hidden";
+			   if(gender=="") {valid=false;}
+			   if(dob=="") {valid=false;document.getElementById("dobmark").style.visibility = "visible";}
+			   else
+			   document.getElementById("dobmark").style.visibility = "hidden";
+			   if(pcontactno=="") {num=false;document.getElementById("pcnomark").style.visibility = "visible";}
+			   else
+			   document.getElementById("pcnomark").style.visibility = "hidden";
+			   if(patemail=="") { mail=false;document.getElementById("patemailmark").style.visibility = "visible";}
+			   else
+			   	document.getElementById("patemailmark").style.visibility = "hidden";
+
+			   if(patpass=="") { document.getElementById("patpassmark").style.visibility = "visible";}
+			   else
+			   	document.getElementById("patpassmark").style.visibility = "hidden";
+
+			   if(patcpass=="") { pass=false;document.getElementById("patcpassmark").style.visibility = "visible";}
+			   else
+			   	document.getElementById("patcpassmark").style.visibility = "hidden";
+
+			   if(docname=="") { valid=false;document.getElementById("docnamemark").style.visibility = "visible";}
+			   else
+			   	document.getElementById("docnamemark").style.visibility = "hidden";
+
+			   if(docemail=="") { mail=false;document.getElementById("docemailmark").style.visibility = "visible";}
+			   else
+			   	document.getElementById("docemailmark").style.visibility = "hidden";
+			   
+			   if(docmob=="") { num=false;document.getElementById("docmobmark").style.visibility = "visible";}
+			   else
+			   	document.getElementById("docmobmark").style.visibility = "hidden";
+
+			   if(valid==true && num==true && mail==true && pass==true)
+       				db.transaction(updatepatient, errorCB, successCB);
+       			else if(valid==true && num==false)
+					{alert("Contact number should have digits");}
+				else if(valid==true && mail==false)
+					{alert("Enter Email ID in correct format");}
+				else if(valid==false && num==false)
+					alert("Fill all the mandatory fields or check Contact number");
+			    else if(valid==false && mail==false)
+					alert("Fill all the mandatory fields or check email ");
+				else if(mail==false)
+					alert("check email ");
+				else
+					alert("Fill all the mandatory fields");
+     });
+     
+
+     function startedit() {
+         var fname=window.localStorage.getItem("fname");
+        var mname=window.localStorage.getItem("mname");
+        var lname=window.localStorage.getItem("lname");
+        var gender=window.localStorage.getItem("gender");
+        var dob=window.localStorage.getItem("dob");
+        var pcontactno=window.localStorage.getItem("pcontactno");
+        var patemail=window.localStorage.getItem("patemail");
+
+        var docname=window.localStorage.getItem("docname");
+        var docemail=window.localStorage.getItem("docemail");
+        var docmob=window.localStorage.getItem("docmob");
+      //  var image=window.localStorage.getItem("image"); 
+       // imgdata=image;
+        // $("#fname").html(fname);
+        document.getElementById('fname').value=fname;
+        document.getElementById('mname').value=mname;
+        document.getElementById('lname').value=lname;
+        if(gender=="Male") {
+        $('#gender').attr('checked',true).checkboxradio("refresh");
+        }
+        else {
+       $('#gender1').attr('checked',true).checkboxradio("refresh");}
+	    var g;
+			   if(document.getElementById('gender').checked) {
+ 					g=document.getElementById('gender').value;
+				}else if(document.getElementById('gender1').checked) {
+ 					g=document.getElementById('gender1').value;
+				}
+        //document.getElementById('gender').value=gender;
+        document.getElementById('dob').value=dob;
+        document.getElementById('pcontactno').value=pcontactno;
+        document.getElementById('patemail').value=patemail;
+        document.getElementById('docname').value=docname;
+        document.getElementById('docemail').value=docemail;
+        document.getElementById('docmob').value=docmob;
+       	//var dbImage = document.getElementById('myimage');
+        //dbImage.style.display = 'block';
+        //dbImage.src="data:image/jpeg;base64,"+window.localStorage.getItem("image");
+    
+    
+     }
+	 	function pushEditPatient(){
+		
+	   var fname=document.getElementById('fname').value;
+	   var lname=document.getElementById('lname').value;
+	   var mname=document.getElementById('mname').value;
+	   var gender=window.localStorage.getItem("gender");			   
+	   var dob=document.getElementById('dob').value;
+	   var pcontactno=document.getElementById('pcontactno').value;
+	   var new_patemail=document.getElementById('patemail').value;
+	   var patcpass=document.getElementById('patcpass').value;			  
+	   var docname=document.getElementById('docname').value;
+	   var docemail=document.getElementById('docemail').value;
+	   var docmob=document.getElementById('docmob').value;
+	   var old_patemail = window.localStorage.getItem("patemail");
+	   var message=fname+"::"+mname+"::"+lname+"::"+gender+"::"+dob+"::"+pcontactno+"::"+docemail+"::"+new_patemail+"::"+patcpass+"::"+old_patemail;
+	   // alert(message); PU 27 Nov 14
+	   jQuery.support.cors = true;
+			var request = $.ajax({
+					  url: "http://mhealthcloud.elasticbeanstalk.com/edit",
+					  type: "POST",
+					  cache : false,
+					 data: {content:message},
+					  dataType: "html",
+					  async:false
+					});
+
+
+					request.done(function( msg ) {
+
+						// alert("Data Successfully pushed to Cloud!!"); PU 27 Nov 14
+					});
+
+					request.fail(function( jqXHR, textStatus ) {
+				
+
+					  //alert( "Sorry!!..Data could not be pushed");
+					  alert("Sorry!!..Data could not be pushed");
+					});					
+	}
+  
+     function updatepatient(tx) {
+     	pushEditPatient();
+       //var emailp=window.localStorage.getItem("email");
+       //var passwp=window.localStorage.getItem("password");
+       var id_face=window.localStorage.getItem("id");
+       var fname=document.getElementById('fname').value;
+       var lname=document.getElementById('lname').value;
+       var mname=document.getElementById('mname').value;
+        var g;
+		if(document.getElementById('gender').checked) {
+ 		g=document.getElementById('gender').value;
+		}else if(document.getElementById('gender1').checked) {
+ 		g=document.getElementById('gender1').value;
+		}
+       var dob=document.getElementById('dob').value;
+       var pcontactno=document.getElementById('pcontactno').value;
+       var patemail=document.getElementById('patemail').value;
+       var patcpass=document.getElementById('patcpass').value;
+       var docname=document.getElementById('docname').value;
+       var docemail=document.getElementById('docemail').value;
+       var docmob=document.getElementById('docmob').value;
+       tx.executeSql('UPDATE DETAILS_PATIENT SET fname="'+fname+'", mname="'+mname+'", lname="'+lname+'", gender="'+g+'", dob="'+dob+'", pcontactno="'+pcontactno+'", patemail="'+patemail+'", pwd="'+patcpass+'", docname="'+docname+
+       	'", docemail="'+docemail+'", docmob="'+docmob+'" WHERE id="'+id_face+'"');
+		
+      }
+        
+     function successCB() {
+       // var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        db.transaction(queryDB, errorCB);
+     }
+    
+     function queryDB(tx) {
+        var id_face_check=window.localStorage.getItem("id");
+        tx.executeSql('SELECT * FROM DETAILS_PATIENT where id="'+id_face_check+'"', [], querySuccess, errorCB);
+     }
+    
+    
+	 function errorCB(err) {
+        if(DEBUG)
+      console.log("Error processing SQL: "+err.code);
+     }
+    
+      
+    
+     function querySuccess(tx, results) {
+        var len = results.rows.length;
+        if(len==0)
+        alert("You have not signed up!, please sign up!");
+        else
+        {
+			 //var email;
+			 //var passwrd;
+			 //email=results.rows.item(0).emailid;
+			 var fn=results.rows.item(0).fname;
+			 var mn=results.rows.item(0).mname;
+			 var ln=results.rows.item(0).lname;
+			 var gender=results.rows.item(0).gender;
+			 var dob=results.rows.item(0).dob;
+			 var pcontactno=results.rows.item(0).pcontactno;
+			 var patemail=results.rows.item(0).patemail;
+			 var docname=results.rows.item(0).docname;
+			 var docemail=results.rows.item(0).docemail;
+			 var docmob=results.rows.item(0).docmob;
+			 
+			 //passwrd=results.rows.item(0).password;     
+			// window.localStorage.setItem("email",email);
+			// window.localStorage.setItem("password",passwrd);
+			 window.localStorage.setItem("fname",fn);
+			 window.localStorage.setItem("mname",mn);
+			 window.localStorage.setItem("lname",ln);
+			 window.localStorage.setItem("gender",gender);
+			 window.localStorage.setItem("dob",dob);
+			 window.localStorage.setItem("pcontactno",pcontactno);
+			 window.localStorage.setItem("patemail",patemail);
+     		 window.localStorage.setItem("docname",docname);
+      		 window.localStorage.setItem("docemail",docemail);
+      		 window.localStorage.setItem("docmob",docmob);
+
+			  document.getElementById("fnmark").style.visibility = "hidden";
+			  document.getElementById("mnmark").style.visibility = "hidden";
+			  document.getElementById("lnmark").style.visibility = "hidden";
+			  document.getElementById("dobmark").style.visibility = "hidden";
+			  document.getElementById("pcnomark").style.visibility = "hidden";
+			  document.getElementById("patemailmark").style.visibility = "hidden";
+			  document.getElementById("docnamemark").style.visibility = "hidden";
+			  document.getElementById("docemailmark").style.visibility = "hidden";
+			  document.getElementById("docmobmark").style.visibility = "hidden";
+			// alert("Edit Successful.."); PU 27 Nov 14
+
+			 if(window.localStorage.getItem("user")=="pat")
+				document.location.href = "./PatientProfileView.html";
+			 else if(window.localStorage.getItem("user")=="admin1")
+			 	document.location.href = "./level1admin.html";
+			 else if(window.localStorage.getItem("user")=="admin2")
+			 	document.location.href = "./level2admin.html";
+         
+        }
+     }
+
+	 function success(){  
+     //  alert("sucess");
+     }
+	
+  
+ 
+    </script>
+   
+</html>

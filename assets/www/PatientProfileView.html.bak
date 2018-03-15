@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+  <style>
+      #chartContainer,
+    chartCon1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#one,two {
+    position: absolute;
+}
+.patient_details_mainpage
+{
+  width:100%;
+  height:120px;
+  background-image:url(./icons/bg_tile.jpg)
+}
+.patient_details_otherpages
+{
+  position:absolute;
+  top:65px;
+  border-radius:10px;
+  left:15px;
+  width:98%;
+  height:120px;
+  background-image:url(./icons/bg_tile.jpg)
+}
+table#detail {
+position:fixed;
+left:25%;
+top:30%;
+margin:-(H/2)px-(W/2)px;
+width:Wpx;
+height:Hpx;
+}
+ul{
+  list-type: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#pulseoximeter_sliding_images{
+width:540px;
+height:400px;
+border-style:none;
+border-color:#598fce;
+border-radius:40px;
+position:absolute;
+top:135px;
+left:8px;
+}
+#pulseoximeter_sliding_images img{
+width:540px;
+height:400px;
+}
+#pulseoximeter_sliding_text{
+  position:absolute;
+  top:135px;
+  width:500px;
+  height:100px;
+  left:680px;
+  border-radius:20px;
+  border-style:none;
+  border-color:#598fce;
+  text-align:justify;
+}
+#pulseoximeter_sliding_text p{
+width:500px;
+height:100px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:x-large;
+font-weight:bolder;
+}
+#bloodpressure_sliding_images{
+width:540px;
+height:400px;
+border-style:none;
+border-color:#598fce;
+border-radius:40px;
+position:absolute;
+top:135px;
+left:8px;
+}
+#bloodpressure_sliding_images img{
+width:540px;
+height:400px;
+}
+#bloodpressure_sliding_text{
+  position:absolute;
+  top:135px;
+  width:500px;
+  height:100px;
+  left:680px;
+  border-radius:20px;
+  border-style:none;
+  border-color:#598fce;
+  text-align:justify;
+}
+
+#bloodpressure_sliding_text p{
+width:500px;
+height:100px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:x-large;
+font-weight:bolder;
+}
+#heartrate_sliding_images{
+width:540px;
+height:400px;
+border-style:none;
+border-color:#598fce;
+border-radius:40px;
+position:absolute;
+top:135px;
+left:8px;
+}
+#heartrate_sliding_images img{
+width:540px;
+height:400px;
+}
+#heartrate_sliding_text{
+  position:absolute;
+  top:200px;
+  width:500px;
+  height:100px;
+  left:680px;
+  border-radius:20px;
+  border-style:none;
+  border-color:#598fce;
+  text-align:justify;
+}
+#heartrate_sliding_text p{
+width:500px;
+height:100px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:x-large;
+font-weight:bolder;
+}
+#ecg_sliding_images{
+width:540px;
+height:400px;
+border-style:none;
+border-color:#598fce;
+border-radius:40px;
+position:absolute;
+top:135px;
+left:8px;
+}
+#ecg_sliding_images img{
+width:540px;
+height:400px;
+}
+#ecg_sliding_text{
+  position:absolute;
+  top:200px;
+  width:500px;
+  height:100px;
+  left:680px;
+  border-radius:20px;
+  border-style:none;
+  border-color:#598fce;
+  text-align:justify;
+}
+#ecg_sliding_text p{
+width:500px;
+height:100px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:x-large;
+font-weight:bolder;
+}
+#cholesterol_sliding_images{
+width:540px;
+height:400px;
+border-style:none;
+border-color:#598fce;
+border-radius:40px;
+position:absolute;
+top:135px;
+left:8px;
+}
+#cholesterol_sliding_images img{
+width:540px;
+height:400px;
+}
+#cholesterol_sliding_text{
+  position:absolute;
+  top:200px;
+  width:500px;
+  height:100px;
+  left:680px;
+  border-radius:20px;
+  border-style:none;
+  border-color:#598fce;
+  text-align:justify;
+}
+#cholesterol_sliding_text p{
+width:500px;
+height:100px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:x-large;
+font-weight:bolder;
+}
+#bloodglucose_sliding_images{
+width:540px;
+height:400px;
+border-style:none;
+border-color:#598fce;
+border-radius:40px;
+position:absolute;
+top:135px;
+left:8px;
+}
+#bloodglucose_sliding_images img{
+width:540px;
+height:400px;
+}
+#bloodglucose_sliding_text{
+  position:absolute;
+  top:135px;
+  width:500px;
+  height:100px;
+  left:680px;
+  border-radius:20px;
+  border-style:none;
+  border-color:#598fce;
+  text-align:justify;
+}
+#bloodglucose_sliding_text p{
+width:500px;
+height:100px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:x-large;
+font-weight:bolder;
+}
+#uricacid_sliding_images{
+width:540px;
+height:400px;
+border-style:none;
+border-color:#598fce;
+border-radius:40px;
+position:absolute;
+top:135px;
+left:8px;
+}
+#uricacid_sliding_images img{
+width:540px;
+height:400px;
+}
+#uricacid_sliding_text{
+  position:absolute;
+  top:200px;
+  width:500px;
+  height:100px;
+  left:680px;
+  border-radius:20px;
+  border-style:none;
+  border-color:#598fce;
+  text-align:justify;
+}
+#uricacid_sliding_text p{
+width:500px;
+height:100px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:x-large;
+font-weight:bolder;
+}
+#thermometer_sliding_images{
+width:540px;
+height:400px;
+border-style:none;
+border-color:#598fce;
+border-radius:40px;
+position:absolute;
+top:135px;
+left:8px;
+}
+#thermometer_sliding_images img{
+width:540px;
+height:400px;
+}
+#thermometer_sliding_text{
+  position:absolute;
+  top:200px;
+  width:500px;
+  height:100px;
+  left:680px;
+  border-radius:20px;
+  border-style:none;
+  border-color:#598fce;
+  text-align:justify;
+}
+#thermometer_sliding_text p{
+width:500px;
+height:100px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:x-large;
+font-weight:bolder;
+}
+#bodyweight_sliding_images{
+width:540px;
+height:400px;
+border-style:none;
+border-color:#598fce;
+border-radius:40px;
+position:absolute;
+top:135px;
+left:8px;
+}
+#bodyweight_sliding_images img{
+width:540px;
+height:400px;
+}
+#bodyweight_sliding_text{
+  position:absolute;
+  top:135px;
+  width:500px;
+  height:100px;
+  left:680px;
+  border-radius:20px;
+  border-style:none;
+  border-color:#598fce;
+  text-align:justify;
+}
+#bodyweight_sliding_text p{
+width:500px;
+height:100px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:x-large;
+font-weight:bolder;
+}
+body{
+  background-color:#f8f8f8;
+  margin: 30px 0 0 0;
+}
+ul{
+  list-type: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer_all{
+position:absolute;
+width:99%;
+border-style:none;
+height:100px;
+top:700px;
+left:5px;
+border-color:#598fce;
+border-radius:20px;
+float:left;
+margin:0px;
+padding:0px;
+}
+.slider{
+ margin: 0 auto;
+ border: 8px solid #FFFFFF;
+ border-radius:5px;
+ box-shadow: 2px 2px 4px #333333;
+ position: relative;
+ max-width: 725px;
+ max-height: 625px;
+}
+
+
+#slider1 img{ width:100%; height:100%; margin-bottom:-px; }
+#slider2 img{ width:100%; height:100%; margin-bottom:-px; }
+.slider_next{
+  width: 62px;
+  height: 62px;
+  background: #f8f8f8;
+  border-radius: 70px;
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: -36px;
+  padding: 5px 0 0 5px;
+  cursor: pointer;
+
+}
+
+.slider_prev{
+  width: 62px;
+  height: 62px;
+  background: #f8f8f8;
+  border-radius: 70px;
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  right: -36px;
+  padding: 5px 0 0 5px;
+  cursor: pointer;
+
+}
+.patient_header
+{
+  position:absolute;
+  width:100%;
+  text-align:center;
+  background-color:#598fbe;
+  color:#FFF;
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight:100;
+  height:50px;
+  top:0px;
+  left:0px;
+}
+
+.ui-block-a,
+.ui-block-b,
+.ui-block-c
+{
+
+height: 100%;
+font-weight: bold;
+text-align: center;
+padding:10px;
+}
+.footer{
+width:100%;
+background-color:#000;
+height:50px;
+}
+
+.center-wrapper span {
+vertical-align: middle;
+align: center;
+line-height: 30px;
+padding: 450px
+}
+
+.center-wrapper img {
+vertical-align: middle;
+}
+
+
+</style>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+  <title>mHealth</title>
+  <!--script src="http://code.jquery.com/jquery-1.9.1.min.js"></script-->
+    <script src="./js/online.js"></script>
+
+    <!-- Javascript required-->
+  <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+<link rel="stylesheet" href="./js/jquery.mobile-1.3.2.min.css" />
+
+    <script src="./js/jquery-1.10.2.min.js"></script>
+
+<!--script type="text/javascript" src="js/jquery.cycle.all.bs.js"></script-->
+<script src="./js/jquery.mobile-1.3.2.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+   <!-- <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+
+  <script type="text/javascript" src="./js/canvasjs.min.js"></script>
+   <script src="./js/hl7.js"></script>
+<link href="styles.css" rel="stylesheet" />
+
+    <script src="./js/knockout-3.0.0.js"></script>
+    <script src="./js/globalize.min.js"></script>
+  <script src="./js/j_P_1.1.js"></script>
+    <script src="./js/dx.chartjs.js"></script>
+    <script src="./js/hiwi.js"></script>
+
+  <script src="./js/jquery.cycle.all.js"></script>
+  <!--Files related to sliders-->
+  <script src="./newjsfiles/imageSlider/pulseoximeter_imageslider.js"></script>
+  <script src="./newjsfiles/textSlider/pulseoximeter_textslider.js"></script>
+  <script src="./newjsfiles/imageSlider/bloodpressure_imageslider.js"></script>
+  <script src="./newjsfiles/textSlider/bloodpressure_textslider.js"></script>
+    </script>
+    <script src="./newjsfiles/imageSlider/bodyweight_imageslider.js"></script>
+    </script>
+    <script src="./newjsfiles/textSlider/bodyweight_textslider.js"></script>
+    </script>
+  <script src="./newjsfiles/imageSlider/ecg_imageslider.js"></script>
+  <script src="./newjsfiles/textSlider/ecg_textslider.js"></script>
+    <script src="./newjsfiles/imageSlider/heartrate_imageslider.js"></script>
+  <script src="./newjsfiles/textSlider/heartrate_textslider.js"></script>
+  <script src="./newjsfiles/imageSlider/bodyheat_imageslider.js"></script>
+  <script src="./newjsfiles/textSlider/bodyheat_textslider.js"></script>
+  <script src="./newjsfiles/imageSlider/bloodglucose_imageslider.js"></script>
+  <script src="./newjsfiles/textSlider/bloodglucose_textslider.js"></script>
+  <script src="./newjsfiles/imageSlider/uricacid_imageslider.js"></script>
+  <script src="./newjsfiles/textSlider/uricacid_textslider.js"></script>
+  <script src="./newjsfiles/imageSlider/cholesterol_imageslider.js"></script>
+  <script src="./newjsfiles/textSlider/cholesterol_textslider.js"></script>
+  <!-- End of Files related to Sliders-->
+  <!--===============================================================================================-->
+  <!-- Files related to Pulse Oximeter Graph Display-->
+  <link rel="stylesheet" type="text/css" href="./Prateek/Pats bargraph_final_100percent/Oximeter Percentage graph files/percentage_css_1.css"/>
+  <link rel="stylesheet" type="text/css" href="./Prateek/Pats bargraph_final_100percent/Oximeter Percentage graph files/percentage_inner.css"/>
+  <script src="./Prateek/Pats bargraph_final_100percent/Oximeter Percentage graph files/percentage_js.js"></script>
+
+  <!-- End of Files related to Pulse Oximeter Graph Display-->
+  <!--===============================================================================================-->
+
+  <!-- Files related to Body Weight display-->
+  <link rel="stylesheet" type="text/css" href="./Prateek/prateek weighing scale/Weighing scale files/weighing_scale_1.css"/>
+  <link rel="canonical" href="./Prateek/prateek weighing scale/Weighing scale files/source/CSS3-digital-clock/index" />
+  <script type="text/javascript" src="./Prateek/prateek weighing scale/Weighing scale files/weighing_scale_2.js"></script>
+ <!-- <script type="text/javascript" src="./newjsfiles/allImageLoader.js"></script>
+	<script>
+	function imageChanger(var id){
+        var pimage;
+
+        pimage = document.getElementById('myimagepulseoximeter');
+        pimage.src = window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+
+        pimage = document.getElementById('myimagebloodpressure');
+        pimage.src = window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+
+        pimage = document.getElementById('myimagebodyweight');
+        pimage.src = window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+
+        pimage = document.getElementById('myimagethermometer');
+        pimage.src = window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+
+        pimage = document.getElementById('myimagecholesterol');
+        pimage.src = window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+
+        pimage = document.getElementById('myimagebloodglucose');
+        pimage.src = window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+
+        pimage = document.getElementById('myimageuricacid');
+        pimage.src = window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+
+        pimage = document.getElementById('myimageecg');
+        pimage.src = window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+
+        pimage = document.getElementById('myimageheartrate');
+        pimage.src = window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+}
+	</script>   PU 29 NOV 14 -->
+  <!-- End of Files related to Body Weight display-->
+  <!--===============================================================================================-->
+  <!--CSS used for the page-->
+
+<!-- ******************************************************************************************-->
+  <script>
+  //PRATEEK
+  //Functions to Blur and unblur the User interface when multifunction Button is clicked
+
+  var Blur_flag = 0;
+
+  function Blur_Page()
+  {
+      $("#MultiFunction_Button_Id").hide();
+      $("#Multiple_Extended_Id").fadeIn(500);
+
+      $("#PULSE_OXIMETER_Id").foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 0.5,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ });
+      $("#PULSE_OXIMETER_Id_a").attr("disabled","disabled");
+
+      $("#bloodPressure_Id").foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 0.5,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ });
+      $("#bloodPressure_Id_a").attr("disabled","disabled");
+
+      $("#THERMOMETER_FINAL_Id").foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 0.5,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ });
+      $("#THERMOMETER_FINAL_Id_a").attr("disabled","disabled");
+
+      $("#TransparentHeart2_Id").foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 0.5,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ });
+      $("#TransparentHeart2_Id_a").attr("disabled","disabled");
+
+      $("#logo_Id").foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 0.5,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ });
+      $("#logo_Id_a").attr("disabled","disabled");
+
+      $("#ecg1_Id").foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 0.5,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ });
+      $("#ecg1_Id_a").attr("disabled","disabled");
+
+      $("#Cloud_Id").foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 0.5,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ });
+      $("#fetchfromcloud").attr("disabled","disabled");
+
+
+      $("#WeighScaleEdited_Id").foggy({
+   blurRadius: 5,          // In pixels.
+   opacity: 0.5,           // Falls back to a filter for IE.
+   cssFilterSupport: true  // Use "-webkit-filter" where available.
+ });
+      $("#WeighScaleEdited_Id_a").attr("disabled","disabled");
+  }
+
+  function Un_Blur_Page()
+  {
+      $("#MultiFunction_Button_Id").fadeIn(500);
+      $("#Multiple_Extended_Id").hide();
+
+      $("#PULSE_OXIMETER_Id").foggy(false);
+      $("#PULSE_OXIMETER_Id_a").removeAttr("disabled");
+
+      $("#bloodPressure_Id").foggy(false);
+      $("#bloodPressure_Id_a").removeAttr("disabled");
+
+
+      $("#THERMOMETER_FINAL_Id").foggy(false);
+      $("#THERMOMETER_FINAL_Id_a").removeAttr("disabled");
+
+      $("#TransparentHeart2_Id").foggy(false);
+      $("#TransparentHeart2_Id_a").removeAttr("disabled");
+
+      $("#logo_Id").foggy(false);
+      $("#logo_Id_a").removeAttr("disabled");
+
+      $("#ecg1_Id").foggy(false);
+      $("#ecg1_Id_a").removeAttr("disabled");
+
+      $("#Cloud_Id").foggy(false);
+      $("#fetchfromcloud").removeAttr("disabled");
+
+      $("#WeighScaleEdited_Id").foggy(false);
+      $("#WeighScaleEdited_Id_a").removeAttr("disabled");
+  }
+
+  $(document).ready(function(){
+
+    $("body").click(function()
+    {
+      if(Blur_flag == 0)
+      Un_Blur_Page();
+      else
+      {
+        Blur_flag = 0;
+      }
+    });
+
+    $("#MultiFunction_Button_Id").click(function(){
+      Blur_flag = 1;
+      Blur_Page();
+    });
+
+    $("#Multiple_Extended_Id").click(function(){
+      Blur_flag = 1;
+    });
+  });
+
+
+  $(document).ready(function(){
+
+    $("#PULSE_OXIMETER_Id_a").click(function(e){
+      if($("#PULSE_OXIMETER_Id_a").attr("disabled")=="disabled")
+      {
+        e.preventDefault();
+      }
+    });
+
+    $("#bloodPressure_Id_a").click(function(e){
+      if($("#bloodPressure_Id_a").attr("disabled")=="disabled")
+      {
+        e.preventDefault();
+      }
+    });
+
+    $("#THERMOMETER_FINAL_Id_a").click(function(e){
+      if($("#THERMOMETER_FINAL_Id_a").attr("disabled")=="disabled")
+      {
+        e.preventDefault();
+      }
+    });
+
+    $("#TransparentHeart2_Id_a").click(function(e){
+      if($("#TransparentHeart2_Id_a").attr("disabled")=="disabled")
+      {
+        e.preventDefault();
+      }
+    });
+
+    $("#ecg1_Id_a").click(function(e){
+      if($("#ecg1_Id_a").attr("disabled")=="disabled")
+      {
+        e.preventDefault();
+      }
+    });
+
+    $("#fetchfromcloud").click(function(e){
+      if($("#fetchfromcloud").attr("disabled")=="disabled")
+      {
+        e.preventDefault();
+      }
+    });
+
+    $("#WeighScaleEdited_Id_a").click(function(e){
+      if($("#WeighScaleEdited_Id_a").attr("disabled")=="disabled")
+      {
+        e.preventDefault();
+      }
+    });
+
+
+
+  });
+
+
+  //Prateek
+  </script>
+
+<!-- ******************************************************************************************-->
+  </head>
+     <body>
+<!-- @ AUTHOR:-VISHWANATH PATIL-->
+<!-- Start of New UI ******************************************************************************-->
+
+      <div data-role="page" id="home" data-pagination="1" >
+     <div data-role="header" data-theme="b" style="overflow:hidden;">
+          <h1>CLIENT</h1>
+          <!--a href="#" data-icon="gear" class="ui-btn-right">Options</a-->
+
+         </div><!-- /header -->
+
+
+    <!--Block which displays patient details -->
+
+    <div data-role="content">
+
+     <div class="ui-bar-b ui-corner-all ui-shadow customPanel"  id=homePanelId>
+    <!--home page header-->
+
+
+
+
+      <div class="patient_details_mainpage">
+      <a href=# id="logout"><img style="position:absolute;top:70px;left:120px;width:100px;height:100px;" src="./images/logout.png"></a>
+       <img style="position:absolute;top:78px;left:250px;width:100px;height:100px;" id="myimage" src="./images/image.jpg" />
+       <label style="position:absolute;top:86px;left:380px;">Name: <span id="name" ></span></label>
+        <!--<a  style="position:absolute;top:86px;left:800px;" href="./edit.html"  rel="external" data-role="button" data-inline="true" data-mini="true" onclick="changeProfile()" >Edit Profile</a>-->
+       <label style="position:absolute;top:120px;left:380px;">Gender: <span id="gender" ></label>
+<!--<img id=exitButton2   class="exit" data-role=button data-icon=delete data-theme=c data-iconpos=notext src="images/exit.png" width="80px" height="80px"> PU 25 Nov'14-->
+
+      </div>
+
+     </div>
+
+
+        <br/>
+        <br/>
+
+
+  <div class="ui-grid-b springboard">
+      <div id="PULSE_OXIMETER_Id" class="ui-block-b "   ><a id="PULSE_OXIMETER_Id_a" href="#pulseoximeter"  data-transition="slide" data-role="none" data-prefetch data-dom-cache="true">
+  <img id="test" src="./images/final/PULSE_OXIMETER.png"  width="60%" height="auto" /></a></div>
+      <div id="bloodPressure_Id" class="ui-block-b "><a id="bloodPressure_Id_a" href="#bloodpressure"  data-transition="slide" data-role="none" data-prefetch data-dom-cache="true">
+  <img src="./images/final/bloodPressure1.png"  width="60%" height="auto" /></a>
+      </div>
+      <div id="THERMOMETER_FINAL_Id" class="ui-block-d"><a id="THERMOMETER_FINAL_Id_a" href="#thermometer"  data-transition="slide" data-role="none" data-prefetch data-dom-cache="true">
+  <img src="./images/final/THERMOMETER_FINAL.png"  width="60%" height="auto" /></a>
+  </div>
+    </div>
+  <div class="ui-grid-b springboard">
+      <div id="TransparentHeart2_Id" class="ui-block-d" id><a id="TransparentHeart2_Id_a" href="#heartrate"  data-transition="slide" data-role="none" data-prefetch data-dom-cache="true"><img src="./images/final/TransparentHeart2.png" width="60%" height="auto" /></a></div>
+      <div id="logo_Id" class="ui-block-b"><img src="./images/logo.png" width="50%" height="auto"/></div>
+
+
+   <div id="MultiFunction_Button_Id" class="ui-block-b"><img src="./images/final/MultiFunction.png" alt="Smiley face" width="60%" height="auto"/></div>
+
+    <div style="display:none" id="Multiple_Extended_Id" class="ui-block-b">
+
+    <!--<img src="./images/final/Multiple_Extended.png" alt="Smiley face" width="60%" height="auto"/>-->
+
+    <table align="center">
+    <tr>
+    <td><a id="cholesterol_Id_a" href="#cholesterol"  data-transition="slide" data-role="none" data-prefetch data-dom-cache="true"><img src="./images/final/CholestrolEdited.png" alt="Smiley face" width="140%0%" height="auto"/></a></td>
+    <td><a id="uricacid_Id_a" href="#uricacid"  data-transition="slide" data-role="none" data-prefetch data-dom-cache="true"><img src="./images/final/uricacid.png" alt="Smiley face" width="140%" height="auto"/></a></td>
+    <td><a id="bloodglucose_Id_a" href="#bloodglucose"  data-transition="slide" data-role="none" data-prefetch data-dom-cache="true"><img src="./images/final/EDITTED_BLOOD_DROP.png" alt="Smiley face" width="140%" height="auto"/></a></td>
+    </tr>
+    </table>
+
+    </div>
+
+    </div>
+
+  <div class="ui-grid-b springboard">
+      <div id="ecg1_Id" class="ui-block-c "   ><a id="ecg1_Id_a" href="#ecg"  data-transition="slide" data-role="none" data-prefetch data-dom-cache="true">
+  <img src="./images/final/ecg1.png"  width="60%" height="auto" /></a></div>
+      <div id="Cloud_Id" class="ui-block-b "><a id="fetchfromcloud" href="#fetch_cloud" data-transition="slide" data-role="none" data-prefetch data-dom-cache="true" >
+  <img src="./images/final/Cloud.png"  width="60%" height="auto" /></a> 
+      </div>
+      <div id="WeighScaleEdited_Id" class="ui-block-e"><a id="WeighScaleEdited_Id_a" href="#bodyweight"  data-transition="slide" data-role="none" data-prefetch data-dom-cache="true">
+  <img src="./images/final/WeighScaleEdited.png"  width="60%" height="auto" /></a></div>
+    </div>
+    </div>
+
+
+    <!-- /content -->
+  <!-- /panel -->
+  <!-- it displays left panel -->
+  <!--       <div data-role=panel id=left-panel data-theme=b data-position-fixed=true>
+              <ul data-role=listview data-theme=c><li data-icon=delete>
+              <a href=# data-rel=close>Close</a></li>
+              <li data-role=list-divider>Home</li>
+ <li data-icon=delete><a  id=exitButton0 data-rel=close>Exit App</a></li>    PU 29 Nov 14 -->
+ <li data-icon=delete><a href=# id="logout">Logout</a></li>
+
+             </ul>
+             </div>
+
+
+        </div>
+
+<!-- END of New UI **********************************************************************************-->
+
+<!--START OF PULSE OXIMETER-->
+<div data-role="page" id="pulseoximeter" data-pagination="4" >
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>PULSE OXIMETER</h1>
+</div>
+<div class="patient_details_otherpages">
+    <a style="position:absolute;top:20px;left:140px;" href="#home"  data-icon="home" ><img style="width:80px;height:80px;" src="images/home1.png"></a>
+       <img style="position:absolute;top:10px;left:250px;width:100px;height:100px;" id="myimagepulseoximeter" src="./images/image.jpg" />
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:20px;left:380px;">Name: <span id="pulseoximetername" ></span></label>
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:60px;left:380px;">Gender: <span id="gender" ></label>
+       <!--<a style="position:absolute;top:10px;left:750px;" href="./edit.html" rel="external" data-role="button" data-theme="b" data-inline="true">Edit Profile</a>-->
+       <label style="color:#FFF;font-size:
+       16px;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;position:absolute;top:11px;left:900px;">Push to Cloud:</label>
+     <div style="position:absolute;top:36px;left:910px;">
+      <select name="pulseoximetercloud" id="pulseoximetercloud" data-role="slider" data-theme="b">
+        <option  value="on">Yes</option>
+        <option  value="off">No</option>
+      </select>
+    </div>
+      <div id="pulseoximeter_sliding_images">
+      <img src="images/pulseoximeter3.png">
+      <img src="images/pulseoximeter3.png">
+      <img src="images/pulseoximeter2.png">
+      <img src="images/pulseoximeter2.png">
+      </div>
+    </div>
+      <div id="pulseoximeter_sliding_text">
+      <p>Turn on Pulse Oximeter.</p>
+      <p>Clip it on to your fore finger.</p>
+      <p>Press Start Button in the tablet.</p>
+      <p>Wait for the measurements.</p>
+      </div>
+ <script>
+function onlystatic(){
+	//alert("only static");
+	document.getElementById("podetails").style.visibility="hidden";
+} 
+ 
+ </script>
+<p><img onclick="onlystatic()" id="startpulseoximeter" style="position:absolute;text-align:center; margin:0 auto;width:500px;left:900px;top:250px;" src="images/staticStart.png" />
+<img id="startpulseoximeter1" style="position:absolute;text-align:center; margin:0 auto; width:500px;left:600px;top:250px;" src="images/startContinuous.png" />
+</p>
+
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#pulseoximeter" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#pulseoximetermap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+<!--PULSE OXIMETER DETAILS-->
+<div data-role="page" id="pulseoximetermap" data-pagination="5">
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>PULSE OXIMETER DETAILS</h1>
+</div>
+<div id="pulseoximeterchart" style="position:absloute;left:20px;top:50px;">
+  <ul id="ponumbers">
+    <li><span>100%</span></li>
+    <li><span>90%</span></li>
+    <li><span>80%</span></li>
+    <li><span>70%</span></li>
+    <li><span>60%</span></li>
+    <li><span>50%</span></li>
+    <li><span>40%</span></li>
+    <li><span>30%</span></li>
+    <li><span>20%</span></li>
+    <li><span>10%</span></li>
+    <li><span>0%</span></li>
+  </ul>
+  <ul id="pobars">
+    <li ><div id="Percentage_value" class="bar" ></div><span style="color:black">SOP2</span></li>
+
+  </ul>
+  <!--<input id="Percentage_input" type="text"/>
+  <button>Click</button>-->
+  </div>
+  <div id="podetails" style="position:absolute;left:200px;top:70px;">
+<canvas  width="650" height="400" id="canv" ></canvas>
+<script src="./Prateek/plot.js" ></script>
+<script>
+var data = [];
+var oxi_flag_toggle = 0;
+var tempData = [0,0,0,0,0,0,0,0,0,0];
+var Oxi_Start_toggle = false;
+function recalc(cont_value){
+	
+	if(oxi_flag_toggle < horizontal_range)
+	{
+		data[oxi_flag_toggle++] = cont_value;
+	}
+	else
+	{
+		Oxi_Start_toggle = true;
+		for(var i=1;i<horizontal_range;i++)
+		{
+			data[i-1] = data[i];
+		}
+		data[horizontal_range-1] = cont_value;
+		ecg_graph_canvas.data=data;
+		ecg_graph_canvas.plot();
+	}
+}
+
+var horizontal_range = 30;
+var ecg_graph_canvas = new MakeDraw();
+ecg_graph_canvas.id = "canv";
+
+ecg_graph_canvas.plotColor = '#14e0f2';
+ecg_graph_canvas.gridColor = 'rgba(0,0,0,0.05)';
+ecg_graph_canvas.fSize = 15;
+ecg_graph_canvas.enumerateP = 0;
+ecg_graph_canvas.enumerateH = 0;
+ecg_graph_canvas.enumerateV = 1;
+
+//setInterval('recalc(Math.random()*100)',20);//send continuous values here.
+
+</script>
+</div>
+
+
+
+<div class="pane1" id="two" style="float:right;">
+      <h3>Your SPO2 and Pulse readings are as follows</h3>
+       <!--  <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a> -->
+     <center>
+     <table data-role="table" border="1" id="table-custom-2"  class="table-stripe ui-responsive" data-column-btn-theme="e">
+         <thead>
+           <tr class="ui-bar-e">
+             <th  ><h3  align="center">Oxymeter Details</h3></th>
+             <th><h3  align="center"></h3></th>
+             <th><h3  align="center">SPO2 Value</h3></th>
+             <th><h3  align="center">Pulse<br>(bps)</h3></th>
+
+           </tr>
+         </thead>
+         <tbody>
+          <!--  <tr style="background-color:rgba(113,198,113,0.4)" > Green-->
+      <tr  id="trcolor" >
+             <th><h1  align="center" class="ui-title" id="bloodpressurecategory"></h1></th>
+             <th><h1   align="center"  class="ui-title" id="bloodpressuresys1"></h1></th>
+             <th><h1  align="center" id="bloodpressuredia1" class="ui-title"></h1></th>
+            <th><h1  align="center" id="bloodpressurepulse1" class="ui-title"></h1></th>
+
+           </tr>
+
+
+
+         </tbody>
+       </table></center>
+     <br/><br/>
+     <div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" onclick="clearOxiTimer()" /></a>
+  <a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>
+  </div>
+ </div>
+ <div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true" onclick="clearOxiTimer()" ><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#pulseoximeter" data-role="button" data-inline="true" onclick="clearOxiTimer()" ><img style="top:600px;height:30px;" src="images/bp_icon.png"  ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#pulseoximetermap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+<!-- END OF PULSE OXIMETER DETAILS-->
+<!-- END OF PULSE OXIMETER UI-->
+
+
+<!--======================================================================================================-->
+
+<!-- START OF BLOOD PRESSURE UI-->
+<div data-role="page" id="bloodpressure" data-pagination="2" >
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>BLOOD PRESSURE</h1>
+</div>
+<div class="patient_details_otherpages">
+    <a style="position:absolute;top:20px;left:140px;" href="#home"  data-icon="home" ><img style="width:80px;height:80px;" src="images/home1.png"></a>
+       <img style="position:absolute;top:10px;left:250px;width:100px;height:100px;" id="myimagebloodpressure" src="./images/image.jpg" />
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:20px;left:380px;">Name: <span id="bloodpressurename" ></span></label>
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:60px;left:380px;">Gender: <span id="gender" ></label>
+       <!--<a style="position:absolute;top:10px;left:750px;" href="./edit.html" rel="external" data-role="button" data-theme="b" data-inline="true">Edit Profile</a>-->
+       <label style="color:#FFF;font-size:
+       16px;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;position:absolute;top:11px;left:900px;">Push to Cloud:</label>
+     <div style="position:absolute;top:36px;left:910px;">
+      <select name="bloodpressurecloud" id="bloodpressurecloud" data-role="slider" data-theme="b">
+        <option  value="on">Yes</option>
+        <option  value="off">No</option>
+      </select>
+    </div>
+      <div id="bloodpressure_sliding_images">
+      <img src="./images/bp5.png">
+      <img src="./images/bp5.png">
+      <img src="./images/bp7.png">
+      <img src="./images/bp7.png">
+      </div>
+    </div>
+      <div id="bloodpressure_sliding_text">
+      <p>Sit down for atleast 5 minutes  before measuring.</p>
+      <p>Slide and place the Wrist BP Monitor on your wrist with display facing palm.</p>
+      <p>Hold your hand upright so that the BP monitor is at your heart level.</p>
+      <p>Press Start Button of the BP Monitor and then press Start Button on the tablet.</p>
+      </div>
+<p><img  id="startbloodpressure" style="position:absolute;text-align:center; margin:0 auto; width:200px;left:900px;top:320px;" src="./images/st.png" />
+</p>
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#bloodpressure" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#bloodpressuremap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+
+<!--BLOOD PRESSURE DETAILS-->
+<div data-role="page" id="bloodpressuremap" data-pagination="3">
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>BLOOD PRESSURE DETAILS</h1>
+</div>
+<div class="content">
+
+    <br/>
+
+      <div class="pane" id="one">
+<br>
+        <div id="chartContainer" style="width: 100%; height:70%;"><div><font size="5">SYS</font></div></div><br>
+        <div id="chartCon1" style="width: 100%; height:60%;"><div><font size="5"><br><br>DIA</font></div></div>
+        <div class="credits"></div>
+      </div>
+
+    <div class="pane1" id="two" style="float:right;">
+      <h3>Your sys and dia readings are as follows</h3>
+       <!--  <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a> -->
+     <center>
+     <table data-role="table" border="1" id="table-custom-2"  class="table-stripe ui-responsive" data-column-btn-theme="e">
+         <thead>
+           <tr class="ui-bar-e">
+             <th  ><h3  align="center">Blood Pressure Category</h3></th>
+             <th><h3  align="center">Systolic<br>(mm Hg)</h3></th>
+             <th><h3  align="center">Diastolic<br>(mm Hg)</h3></th>
+             <th><h3  align="center">Pulse<br>(bps)</h3></th>
+
+           </tr>
+         </thead>
+         <tbody>
+          <!--  <tr style="background-color:rgba(113,198,113,0.4)" > Green-->
+      <tr  id="trcolor" >
+             <th><h1  align="center" class="ui-title" id="bloodpressurecategory"></h1></th>
+             <th><h1   align="center"  class="ui-title" id="bloodpressuresys"></h1></th>
+             <th><h1  align="center" id="bloodpressuredia" class="ui-title"></h1></th>
+            <th><h1  align="center" id="bloodpressurepulse" class="ui-title"></h1></th>
+
+           </tr>
+
+
+
+         </tbody>
+       </table></center>
+     <br/><br/>
+     <div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+  <a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>
+  </div>
+</div><!--END OF BLOOD PRESSURE MAP-->
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true" onclick="clearBPTimer()" ><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#bloodpressure" data-role="button" data-inline="true" onclick="clearBPTimer()" ><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#bloodpressuremap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+</div>
+<!--=======================================================================================-->
+
+<!-- fetching from cloud-->
+<div data-role="page" id="fetch_cloud" data-pagination="2" > 
+<!--<h1>CLOUD</h1>
+<div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+  </div>-->
+
+
+<div data-role="header" class="ui-header ui-bar-b" role="banner" data-theme="b" style="overflow:hidden;">
+			<div data-role="header" data-theme="b" style="overflow:hidden;">
+		<h1> GDV mHealth Cloud</h1>
+		<a href="#home" id="logout1" data-icon="home"> Back to App </a>
+		</div>
+			
+			 </div>
+<img  id="fetchdata" onClick="fetch_data();" style="position:absolute;margin:0 auto; height:auto; width:430px;left:150px;top:200px;border-style:none; border-color:#598fce;border-radius: 70px;" src="images/cldd.png" />
+<img  id="fetchgraph" onClick="fetch_chart();" style="position:absolute; margin:0 auto; height:auto; width:430px;left:770px;top:200px; border-style:none; border-color:#598fce; border-radius: 70px;" src="images/cldg.png" />
+</div>
+
+<!--end of cloud function -->
+<!--START OF BODY WEIGHT UI-->
+
+<div data-role="page" id="bodyweight" data-pagination="6" >
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>BODY WEIGHT</h1>
+</div>
+<div class="patient_details_otherpages">
+    <a style="position:absolute;top:20px;left:140px;" href="#home"  data-icon="home" ><img style="width:80px;height:80px;" src="images/home1.png"></a>
+       <img style="position:absolute;top:10px;left:250px;width:100px;height:100px;" id="myimagebodyweight" src="./images/image.jpg" />
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:20px;left:380px;">Name: <span id="bodyweightname" ></span></label>
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:60px;left:380px;">Gender: <span id="gender" ></label>
+       <!--<a style="position:absolute;top:10px;left:750px;" href="./edit.html" rel="external" data-role="button" data-theme="b" data-inline="true">Edit Profile</a>-->
+       <label style="color:#FFF;font-size:
+       16px;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;position:absolute;top:11px;left:900px;">Push to Cloud:</label>
+     <div style="position:absolute;top:36px;left:910px;">
+      <select name="bodyweightcloud" id="bodyweightcloud" data-role="slider" data-theme="b">
+        <option  value="on">Yes</option>
+        <option  value="off">No</option>
+      </select>
+    </div>
+      <div id="bodyweight_sliding_images">
+      <img src="images/bodyweight.png">
+      </div>
+    </div>
+    <div id="bodyweight_sliding_text">
+      <p>Pair the device with your Tablet.</p>
+      <p>Stand on it with body,erect and face,looking forward.</p>
+      <p>Press Start Button and wait for the measured weight.</p>
+      </div>
+
+<p><img  id="startbodyweight" style="position:absolute;text-align:center; margin:0 auto; width:200px;left:900px;top:320px;" src="images/st.png" />
+</p>
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#bodyweight" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#bodyweightmap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+<!--BODY WEIGHT DETAILS-->
+<div data-role="page" id="bodyweightmap" data-pagination="7">
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>BODY WEIGHT DETAILS</h1>
+</div>
+<div class="content">
+  
+    <br/>
+
+      <div class="pane" id="one">
+<br>
+  <div class="clock">
+
+<ul>
+      <li id="hours">00</li>
+      <li id="point">.</li>
+      <li id="min">0</li>
+
+      <li class="kg">   kg</li>
+
+
+</ul>
+</br>
+<!--  <input id="weighing_scale_input_before" type="text"/>
+  <input id="weighing_scale_input_after" type="text"/>
+   <button data-inline="true" data-theme="b">Click</button>   -->
+
+</div>
+</div>
+
+
+
+    <div class="pane1" id="two" style="float:right;">
+      <h3>Your Weight readings are as follows</h3>
+       <!--  <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a> -->
+     <center>
+     <table data-role="table" border="1" id="table-custom-2"  class="table-stripe ui-responsive" data-column-btn-theme="e">
+         <thead>
+           <tr class="ui-bar-e">
+             <th  ><h3  align="center">Body Weight Category</h3></th>
+             <th><h3  align="center">Weight</h3></th>
+             <th><h3  align="center">Weight<br>(Decimal)</h3></th>
+             <th><h3  align="center"><br></h3></th>
+
+           </tr>
+         </thead>
+         <tbody>
+          <!--  <tr style="background-color:rgba(113,198,113,0.4)" > Green-->
+      <tr  id="trcolor" >
+             <th><h1  align="center" class="ui-title" id="bodyweightcategory"></h1></th>
+             <th><h1   align="center"  class="ui-title" id="bodyweightsysw"></h1></th>
+             <th><h1  align="center" id="bodyweightdiaw" class="ui-title"></h1></th>
+            <th><h1  align="center" id="bodyweightpulsew" class="ui-title"></h1></th>
+
+           </tr>
+
+
+
+         </tbody>
+       </table></center>
+     <br/><br/>
+     <div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+  <a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>
+  </div>
+</div><!--END BODY WEIGHT MAP-->
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#bodyweight" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#bodyweightmap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+</div>
+
+<!--END OF BODY WEIGHT UI-->
+
+<!--=========================================================================================================-->
+<!-- START OF BODY HEAT UI-->
+<div data-role="page" id="thermometer" data-pagination="8" >
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>BODY HEAT</h1>
+</div>
+<div class="patient_details_otherpages">
+    <a style="position:absolute;top:20px;left:140px;" href="#home"  data-icon="home" ><img style="width:80px;height:80px;" src="images/home1.png"></a>
+       <img style="position:absolute;top:10px;left:250px;width:100px;height:100px;" id="myimagethermometer" src="./images/image.jpg" />
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:20px;left:380px;">Name: <span id="thermometername" ></span></label>
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:60px;left:380px;">Gender: <span id="gender" ></label>
+       <!--<a style="position:absolute;top:10px;left:750px;" href="./edit.html" rel="external" data-role="button" data-theme="b" data-inline="true">Edit Profile</a>-->
+       <label style="color:#FFF;font-size:
+       16px;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;position:absolute;top:11px;left:900px;">Push to Cloud:</label>
+     <div style="position:absolute;top:36px;left:910px;">
+      <select name="thermometercloud" id="thermometercloud" data-role="slider" data-theme="b">
+        <option  value="on">Yes</option>
+        <option  value="off">No</option>
+      </select>
+    </div>
+      <div id="thermometer_sliding_images">
+      <img src="images/final/THERMOMETER_FINAL.png">
+      </div>
+    </div>
+    <div id="thermometer_sliding_text">
+      <p>Contents yet to come.</p>
+      </div>
+
+<p><img  id="startthermometer" style="position:absolute;text-align:center; margin:0 auto; width:200px;left:900px;top:320px;" src="images/st.png" />
+</p>
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#thermometer" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#thermometermap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+<!--BODY HEAT DETAILS-->
+<div data-role="page" id="thermometermap" data-pagination="8">
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>BODY HEAT DETAILS</h1>
+</div>
+<div class="content">
+
+    <br/>
+
+      <div class="pane" id="one">
+<br>
+
+<!-- Removed by PU 08 Nov 14
+        <div id="chartContainer" style="width: 100%; height:70%;"><div><font size="5">SYS</font></div></div><br>
+        <div id="chartCon1" style="width: 100%; height:60%;"><div><font size="5"><br><br>DIA</font></div></div>
+        <div class="credits"></div>
+Removed by PU -->
+
+      </div>
+
+    <div class="pane1" id="two" style="float:right;">
+      <h3>Your Temperature readings are as follows</h3>
+       <!--  <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a> -->
+     <center>
+     <table data-role="table" border="1" id="table-custom-2"  class="table-stripe ui-responsive" data-column-btn-theme="e">
+         <thead>
+           <tr class="ui-bar-e">
+             <th  ><h3  align="center">Blood Pressure Category</h3></th>
+             <th><h3  align="center">Systolic<br>(mm Hg)</h3></th>
+             <th><h3  align="center">Diastolic<br>(mm Hg)</h3></th>
+             <th><h3  align="center">Pulse<br>(bps)</h3></th>
+
+           </tr>
+         </thead>
+         <tbody>
+          <!--  <tr style="background-color:rgba(113,198,113,0.4)" > Green-->
+      <tr  id="trcolor" >
+             <th><h1  align="center" class="ui-title" id="thermometercategory"></h1></th>
+             <th><h1   align="center"  class="ui-title" id="thermometersys"></h1></th>
+             <th><h1  align="center" id="thermometerdia" class="ui-title"></h1></th>
+            <th><h1  align="center" id="thermometerpulse" class="ui-title"></h1></th>
+
+           </tr>
+
+
+
+         </tbody>
+       </table></center>
+     <br/><br/>
+     <div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+  <a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>
+  </div>
+</div><!--END BODY HEAT MAP-->
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#thermometer" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#thermometermap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+</div>
+<!-- END OF BODY HEAT UI-->
+<!--=======================================================================================================-->
+
+
+<!-- START OF CHOLESTEROL UI-->
+<div data-role="page" id="cholesterol" data-pagination="9" >
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>CHOLESTEROL</h1>
+</div>
+<div class="patient_details_otherpages">
+    <a style="position:absolute;top:20px;left:140px;" href="#home"  data-icon="home" ><img style="width:80px;height:80px;" src="images/home1.png"></a>
+       <img style="position:absolute;top:10px;left:250px;width:100px;height:100px;" id="myimagecholesterol" src="./images/image.jpg" />
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:20px;left:380px;">Name: <span id="cholesterolname" ></span></label>
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:60px;left:380px;">Gender: <span id="gender" ></label>
+       <!--<a style="position:absolute;top:10px;left:750px;" href="./edit.html" rel="external" data-role="button" data-theme="b" data-inline="true">Edit Profile</a>-->
+       <label style="color:#FFF;font-size:
+       16px;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;position:absolute;top:11px;left:900px;">Push to Cloud:</label>
+     <div style="position:absolute;top:36px;left:910px;">
+      <select name="cholesterolcloud" id="cholesterolcloud" data-role="slider" data-theme="b">
+        <option  value="on">Yes</option>
+        <option  value="off">No</option>
+      </select>
+    </div>
+      <div id="cholesterol_sliding_images">
+      <img src="./images/final/CholestrolEdited.png">
+      </div>
+    </div>
+    <div id="cholesterol_sliding_text">
+      <p></p>
+      </div>
+
+<p><img  id="startcholesterol" style="position:absolute;text-align:center; margin:0 auto; width:200px;left:900px;top:320px;" src="images/st.png" />
+</p>
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#cholesterol" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#cholesterolmap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+<!--CHOLESTEROL DETAILS-->
+<div data-role="page" id="cholesterolmap" data-pagination="10">
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>CHOLESTEROL DETAILS</h1>
+</div>
+  
+  
+    <div class="content">
+    <br>  
+      <div class="pane" id="one">
+
+        
+      <div id="chartLin1" style="width: 100%; height: 70%;"></div>
+      
+        <div class="credits"></div>         
+      </div>
+
+    <div class="pane1" id="two" style="float:right;">
+      <h3>Your Cholesterol readings are as follows</h3>
+       <!--  <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a> -->
+     <center>
+     <table data-role="table" border="1" id="table-custom-2"  class="table-stripe ui-responsive" data-column-btn-theme="e">
+         <thead>
+           <tr class="ui-bar-e">
+             <th  ><h3  align="center">Cholesterol Category</h3></th>
+             <th><h3  align="center">Cholesterol<br>(mmol)</h3></th>
+             <th><h3  align="center">Cholesterol<br>(mm Hg)</h3></th>
+             <th><h3  align="center"><br></h3></th>
+
+           </tr>
+         </thead>
+         <tbody>
+          <!--  <tr style="background-color:rgba(113,198,113,0.4)" > Green-->
+      <tr  id="trcolor" >
+             <th><h1  align="center" class="ui-title" id="cholesterolcategory"></h1></th>
+             <th><h1   align="center"  class="ui-title" id="cholesterolsys"></h1></th>
+             <th><h1  align="center" id="cholesteroldia" class="ui-title"></h1></th>
+            <th><h1  align="center" id="cholesterolpulse" class="ui-title"></h1></th>
+
+           </tr>
+
+
+
+         </tbody>
+       </table></center>
+     <br/><br/>
+     <div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+  <a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>
+  </div>
+</div><!--END CHOLESTEROL MAP-->
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#cholesterol" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#cholesterolmap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+</div>
+<!-- END OF CHOLESTEROL UI-->
+
+<!--====================================================================================================-->
+
+<!-- START OF BLOOD GLUCOSE UI-->
+<div data-role="page" id="bloodglucose" data-pagination="11" >
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>BLOOD GLUCOSE</h1>
+</div>
+<div class="patient_details_otherpages">
+    <a style="position:absolute;top:20px;left:140px;" href="#home"  data-icon="home" ><img style="width:80px;height:80px;" src="images/home1.png"></a>
+       <img style="position:absolute;top:10px;left:250px;width:100px;height:100px;" id="myimagebloodglucose" src="./images/image.jpg" />
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:20px;left:380px;">Name: <span id="bloodglucosename" ></span></label>
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:60px;left:380px;">Gender: <span id="gender" ></label>
+       <!--<a style="position:absolute;top:10px;left:750px;" href="./edit.html" rel="external" data-role="button" data-theme="b" data-inline="true">Edit Profile</a>-->
+       <label style="color:#FFF;font-size:
+       16px;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;position:absolute;top:11px;left:900px;">Push to Cloud:</label>
+     <div style="position:absolute;top:36px;left:910px;">
+      <select name="bloodglucosecloud" id="bloodglucosecloud" data-role="slider" data-theme="b">
+        <option  value="on">Yes</option>
+        <option  value="off">No</option>
+      </select>
+    </div>
+      <div id="bloodglucose_sliding_images">
+      <img src="./images/bs2.png">
+    <img src="./images/bs4.png">
+    <img src="./images/bs5.png">
+    <img src="./images/bs5.png">
+      </div>
+    </div>
+    <div id="bloodglucose_sliding_text">
+      <p>Insert the test strip to turn on the meter.</p>
+    <p>The front side of the test strip should face up when inserting the test strip.</p>
+    <p>Prick your finger using pricker.</p>
+    <p>Please apply blood onto the test strip.</p>
+      </div>
+
+<p><img  id="startbloodglucose" style="position:absolute;text-align:center; margin:0 auto; width:200px;left:900px;top:320px;" src="images/st.png" />
+</p>
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#bloodglucose" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#bloodglucosemap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+<!--BLOOD GLUCOSE DETAILS-->
+<div data-role="page" id="bloodglucosemap" data-pagination="12">
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>BLOOD GLUCOSE DETAILS</h1>
+</div>
+  
+  
+    <div class="content">
+    <br>  
+      <div class="pane" id="one">
+
+        
+      <div id="chartLin2" style="width: 100%; height: 70%;"></div>
+      
+        <div class="credits"></div>         
+      </div>
+
+    <div class="pane1" id="two" style="float:right;">
+      <h3>Your blood glucose readings are as follows</h3>
+       <!--  <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a> -->
+     <center>
+     <table data-role="table" border="1" id="table-custom-2"  class="table-stripe ui-responsive" data-column-btn-theme="e">
+         <thead>
+           <tr class="ui-bar-e">
+             <th  ><h3  align="center">Blood Glucose Category</h3></th>
+             <th><h3  align="center">Blood Glucose<br>mmol</h3></th>
+             <th><h3  align="center">Blood Glucose<br>mm Hg</h3></th>
+             <th><h3  align="center"><br></h3></th>
+
+           </tr>
+         </thead>
+         <tbody>
+          <!--  <tr style="background-color:rgba(113,198,113,0.4)" > Green-->
+      <tr  id="trcolor" >
+             <th><h1  align="center" class="ui-title" id="bloodglucosecategory"></h1></th>
+             <th><h1   align="center"  class="ui-title" id="bloodglucosesys"></h1></th>
+             <th><h1  align="center" id="bloodglucosedia" class="ui-title"></h1></th>
+            <th><h1  align="center" id="bloodglucosepulse" class="ui-title"></h1></th>
+
+           </tr>
+
+
+
+         </tbody>
+       </table></center>
+     <br/><br/>
+     <div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+  <a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>
+  </div>
+</div><!--END BLOOD GLUCOSE MAP-->
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#bloodglucose" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#bloodglucosemap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+</div>
+<!-- END OF BLOOD GLUCOSE UI-->
+
+<!--========================================================================================================-->
+
+
+<!-- START OF URIC ACID-->
+<div data-role="page" id="uricacid" data-pagination="13" >
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>URIC ACID</h1>
+</div>
+<div class="patient_details_otherpages">
+    <a style="position:absolute;top:20px;left:140px;" href="#home"  data-icon="home" ><img style="width:80px;height:80px;" src="images/home1.png"></a>
+       <img style="position:absolute;top:10px;left:250px;width:100px;height:100px;" id="myimageuricacid" src="./images/image.jpg" />
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:20px;left:380px;">Name: <span id="uricacidname" ></span></label>
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:60px;left:380px;">Gender: <span id="gender" ></label>
+       <!--<a style="position:absolute;top:10px;left:750px;" href="./edit.html" rel="external" data-role="button" data-theme="b" data-inline="true">Edit Profile</a>-->
+       <label style="color:#FFF;font-size:
+       16px;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;position:absolute;top:11px;left:900px;">Push to Cloud:</label>
+     <div style="position:absolute;top:36px;left:910px;">
+      <select name="uricacidcloud" id="uricacidcloud" data-role="slider" data-theme="b">
+        <option  value="on">Yes</option>
+        <option  value="off">No</option>
+      </select>
+    </div>
+      <div id="uricacid_sliding_images">
+      <img src="./images/final/uricacid.png">
+      </div>
+    </div>
+    <div id="uricacid_sliding_text">
+    <p></p>
+      </div>
+
+<p><img  id="starturicacid" style="position:absolute;text-align:center; margin:0 auto; width:200px;left:900px;top:320px;" src="images/st.png" />
+</p>
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#uricacid" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#uricacidmap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+<!--URIC ACID DETAILS-->
+<div data-role="page" id="uricacidmap" data-pagination="14">
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>URIC ACID DETAILS</h1>
+</div>
+  
+  
+    <div class="content">
+    <br>  
+      <div class="pane" id="one">
+
+        
+      <div id="chartLin3" style="width: 100%; height: 70%;"></div>
+      
+        <div class="credits"></div>         
+      </div>
+
+    <div class="pane1" id="two" style="float:right;">
+      <h3>Your Blood Uric Acid readings are as follows</h3>
+       <!--  <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a> -->
+     <center>
+     <table data-role="table" border="1" id="table-custom-2"  class="table-stripe ui-responsive" data-column-btn-theme="e">
+         <thead>
+           <tr class="ui-bar-e">
+             <th  ><h3  align="center">Blood Uric Acid Category</h3></th>
+             <th><h3  align="center">Blood Uric Acid<br>(mg / dL)</h3></th>
+             <th><h3  align="center">Blood Uric Acid<br>(uM)</h3></th>
+             <th><h3  align="center"><br></h3></th>
+
+           </tr>
+         </thead>
+         <tbody>
+          <!--  <tr style="background-color:rgba(113,198,113,0.4)" > Green-->
+      <tr  id="trcolor" >
+             <th><h1  align="center" class="ui-title" id="uricacidcategory"></h1></th>
+             <th><h1   align="center"  class="ui-title" id="uricacidsys"></h1></th>
+             <th><h1  align="center" id="uricaciddia" class="ui-title"></h1></th>
+            <th><h1  align="center" id="uricacidpulse" class="ui-title"></h1></th>
+
+           </tr>
+
+
+
+         </tbody>
+       </table></center>
+     <br/><br/>
+     <div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+  <a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>
+  </div>
+</div><!--END URIC ACID MAP-->
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#uricacid" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#uricacidmap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+</div>
+<!-- END OF URIC ACID-->
+
+<!--==================================================================================================-->
+
+<!-- START OF ECG UI-->
+<div data-role="page" id="ecg" data-pagination="15" >
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>ECG</h1>
+</div>
+<div class="patient_details_otherpages">
+    <a style="position:absolute;top:20px;left:140px;" href="#home"  data-icon="home" ><img style="width:80px;height:80px;" src="images/home1.png"></a>
+       <img style="position:absolute;top:10px;left:250px;width:100px;height:100px;" id="myimageecg" src="./images/image.jpg" />
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:20px;left:380px;">Name: <span id="ecgname" ></span></label>
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:60px;left:380px;">Gender: <span id="gender" ></label>
+       <!--<a style="position:absolute;top:10px;left:750px;" href="./edit.html" rel="external" data-role="button" data-theme="b" data-inline="true">Edit Profile</a>-->
+       <label style="color:#FFF;font-size:
+       16px;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;position:absolute;top:11px;left:900px;">Push to Cloud:</label>
+     <div style="position:absolute;top:36px;left:910px;">
+      <select name="ecgcloud" id="ecgcloud" data-role="slider" data-theme="b">
+        <option  value="on">Yes</option>
+        <option  value="off">No</option>
+      </select>
+    </div>
+      <div id="ecg_sliding_images">
+      <img src="./images/final/ecg1.png">
+      </div>
+    </div>
+    <div id="ecg_sliding_text">
+    <p>Contents yet to come.</p>
+      </div>
+
+<p><img  id="startecg" style="position:absolute;text-align:center; margin:0 auto;width:500px;left:900px;top:250px;" src="images/staticStart.png" />
+<img  id="startecg1" style="position:absolute;text-align:center; margin:0 auto; width:500px;left:600px;top:250px;" src="images/startContinuous.png" />
+</p>
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#ecg" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#ecgmap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+<!--ECG DETAILS-->
+<div data-role="page" id="ecgmap" data-pagination="16">
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>ECG DETAILS</h1>
+</div>
+<div class="content">
+
+    <br/>
+
+      <div class="pane" id="one">
+<br>
+
+<!-- Removed by PU 08 Nov 14
+        <div id="chartContainer" style="width: 100%; height:70%;"><div><font size="5">SYS</font></div></div><br>
+        <div id="chartCon1" style="width: 100%; height:60%;"><div><font size="5"><br><br>DIA</font></div></div>
+        <div class="credits"></div>
+Remove by PU -->
+
+      </div>
+
+    <div class="pane1" id="two" style="float:right;">
+      <h3>Your sys and dia readings are as follows</h3>
+       <!--  <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a> -->
+     <center>
+     <table data-role="table" border="1" id="table-custom-2"  class="table-stripe ui-responsive" data-column-btn-theme="e">
+         <thead>
+           <tr class="ui-bar-e">
+             <th  ><h3  align="center">Blood Pressure Category</h3></th>
+             <th><h3  align="center">Systolic<br>(mm Hg)</h3></th>
+             <th><h3  align="center">Diastolic<br>(mm Hg)</h3></th>
+             <th><h3  align="center">Pulse<br>(bps)</h3></th>
+
+           </tr>
+         </thead>
+         <tbody>
+          <!--  <tr style="background-color:rgba(113,198,113,0.4)" > Green-->
+      <tr  id="trcolor" >
+             <th><h1  align="center" class="ui-title" id="ecgcategory"></h1></th>
+             <th><h1   align="center"  class="ui-title" id="ecgsys"></h1></th>
+             <th><h1  align="center" id="ecgdia" class="ui-title"></h1></th>
+            <th><h1  align="center" id="ecgpulse" class="ui-title"></h1></th>
+
+           </tr>
+
+
+
+         </tbody>
+       </table></center>
+     <br/><br/>
+     <div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+  <a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>
+  </div>
+</div><!--END OF ECG MAP-->
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#ecg" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="images/bp_icon.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#ecgmap" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+</div>
+
+<!-- END OF ECG UI-->
+
+<!--=========================================================================================================-->
+
+<!-- START OF HEART RATE UI-->
+<div data-role="page" id="heartrate" data-pagination="17" >
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>HEART RATE</h1>
+</div>
+<div class="patient_details_otherpages">
+    <a style="position:absolute;top:20px;left:140px;" href="#home"  data-icon="home" ><img style="width:80px;height:80px;" src="images/home1.png"></a>
+       <img style="position:absolute;top:10px;left:250px;width:100px;height:100px;" id="myimageheartrate" src="./images/image.jpg" />
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:20px;left:380px;">Name: <span id="heartratename" ></span></label>
+       <label style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:16px;color:#FFF;position:absolute;top:60px;left:380px;">Gender: <span id="gender" ></label>
+       <!--<a style="position:absolute;top:10px;left:750px;" href="./edit.html" rel="external" data-role="button" data-theme="b" data-inline="true">Edit Profile</a>-->
+       <label style="color:#FFF;font-size:
+       16px;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;position:absolute;top:11px;left:900px;">Push to Cloud:</label>
+     <div style="position:absolute;top:36px;left:910px;">
+      <select name="heartratecloud" id="heartratecloud" data-role="slider" data-theme="b">
+        <option  value="on">Yes</option>
+        <option  value="off">No</option>
+      </select>
+    </div>
+      <div id="heartrate_sliding_images">
+      <img src="./images/zephyr.png">
+    <img src="./images/final/TransparentHeart2.png">
+      </div>
+    <div id="heartrate_sliding_text">
+    <p></p>
+      </div>
+
+<p><img  id="startheartrate" style="position:absolute;text-align:center; margin:0 auto;width:500px;left:900px;top:250px;" src="images/staticStart.png" />
+<img  id="startheartrate1" style="position:absolute;text-align:center; margin:0 auto; width:500px;left:600px;top:250px;" src="images/startContinuous.png" />
+</p>
+</div>
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#heartrate" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./images/heart3.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#bloodpressuremap2" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+
+<!--HEART RATE DETAILS-->
+<div data-role="page" id="bloodpressuremap2" data-pagination="18">
+<div class="patient_header" data-role="header" data-theme="b">
+<h1>HEART RATE DETAILS</h1>
+</div>
+<div class="content">
+
+    <br/>
+
+      <div class="pane" id="one">
+<br>
+<!-- Removed by PU 08 Nov 14
+        <div id="chartContainer" style="width: 100%; height:70%;"><div><font size="5">SYS</font></div></div><br>
+        <div id="chartCon1" style="width: 100%; height:60%;"><div><font size="5"><br><br>DIA</font></div></div>
+        <div class="credits"></div>
+Remove by PU -->        
+      </div>
+
+    <div class="pane1" id="two" style="float:right;">
+      <h3>Your Heart rate readings are as follows</h3>
+       <!--  <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a> -->
+     <center>
+     <table data-role="table" border="1" id="table-custom-2"  class="table-stripe ui-responsive" data-column-btn-theme="e">
+         <thead>
+           <tr class="ui-bar-e">
+             <th  ><h3  align="center">Heart Rate Parametrs</h3></th>
+             <th><h3  align="center">Pulse<br>(BPM)</h3></th>
+             <th><h3  align="center">Speed<br></h3></th>
+             <th><h3  align="center">Battery<br>(%)</h3></th>
+
+           </tr>
+         </thead>
+         <tbody>
+          <!--  <tr style="background-color:rgba(113,198,113,0.4)" > Green-->
+      <tr  id="trcolor" >
+             <th><h1  align="center" class="ui-title" id="heartratecategory"></h1></th>
+             <th><h1   align="center"  class="ui-title" id="heartratesys"></h1></th>
+             <th><h1  align="center" id="heartratedia" class="ui-title"></h1></th>
+            <th><h1  align="center" id="heartratepulse" class="ui-title"></h1></th>
+
+           </tr>
+
+
+
+         </tbody>
+       </table></center>
+     <br/><br/>
+     <div class="home_exit_navigators">
+    <a href="#home" ><img width="80px" height="80px"  src="./images/home1.png" /></a>
+  <a href="#"><img src="./images/history.png" width="80px" height="80px" ></a>
+  </div>
+</div><!--END OF HEART RATE MAP-->
+<div class="footer_all">
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#home" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/home-64.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;left:0px;" href="#heartrate" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./images/heart3.png" ></a>
+    <a style="width:32%;height:60px;top:-7px;" href="#bloodpressuremap2" data-role="button" data-inline="true"><img style="top:600px;height:30px;" src="./icons/location-64.png" ></a>
+</div>
+</div>
+</div>
+
+<!-- END OF HEART RATE UI-->
+<!--===============================================================================================-->
+</body>
+<script>
+
+       var DB_VERSION = "1.0";
+    var DB_NAME = "Database";
+    var DB_DISPLAY_NAME = "Cordova Demo";
+    var DB_SIZE = 20000;
+    var DEBUG=true;
+    var db=window.openDatabase (DB_NAME, DB_VERSION, DB_DISPLAY_NAME, DB_SIZE);
+    var imgdata;
+
+
+   $( document ).bind( 'mobileinit', function(){
+  $.mobile.loader.prototype.options.text = "loading";
+  $.mobile.loader.prototype.options.textVisible = false;
+  $.mobile.loader.prototype.options.theme = "c";
+  $.mobile.loader.prototype.options.html = "";
+});
+
+	function changeProfile(){
+		window.localStorage.setItem("user","pat"); 
+    //window.localStorage.setItem("pwd",patpass);
+  }
+
+    $("#logout").bind('click', function(){
+    var user_type=window.localStorage.getItem("user_type");
+     if(user_type=="admin")
+        document.location.href="./login.html";
+    else
+    document.location.href="./login.html";
+    });
+
+     //fetch from cloud
+	 function fetch_data()
+	 {
+		//alert("cloud data"+window.localStorage.getItem("patemail"));
+        document.location.href="http://mhealthcloud.elasticbeanstalk.com/healthdatacloud.jsp?pat_id="+window.localStorage.getItem("patemail");
+	}
+	
+	function fetch_chart()
+	 {
+		//alert("cloud chart"+window.localStorage.getItem("patemail"));
+        document.location.href="http://mhealthcloud.elasticbeanstalk.com/chartcloud.jsp?pat_id="+window.localStorage.getItem("patemail");
+	}
+    /* $("#fetchdata").bind('click', function(){
+    alert("cloud");
+        document.location.href="http://2-dot-hiwicloud.appspot.com/patientcloud.jsp?id="+window.localStorage.getItem("patemail");;
+
+    });*/
+
+     function start() {
+       //var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+       db.transaction(search, errorCB, success);
+     }
+
+     function errorCB(err) {
+      if(DEBUG)
+      console.log("Error processing SQL: "+err.code);
+     }
+
+
+     function search(tx) {
+        var id=window.localStorage.getItem("id");
+        //alert("Searching for patient with id "+id);
+        tx.executeSql('SELECT * FROM DETAILS_PATIENT where id='+id, [], querySuccess, errorCB);
+     }
+
+    function querySuccess(tx, results) {
+      var len = results.rows.length;
+      if(len==0)
+      alert("You have not signed up!, please sign up!");
+      else
+      {
+        
+      var id;     
+      id=results.rows.item(0).id;
+      //alert("Patient ID is "+id);
+      fn=results.rows.item(0).fname;
+      mn=results.rows.item(0).mname;
+      ln=results.rows.item(0).lname;
+      var gender=results.rows.item(0).gender;
+      var dob=results.rows.item(0).dob;
+      var pcontactno=results.rows.item(0).pcontactno;
+      //var scontactno=results.rows.item(0).scontactno;
+      var patemail=results.rows.item(0).patemail;
+      var patpass=results.rows.item(0).pwd;
+      var docname=results.rows.item(0).docname;
+      var docemail=results.rows.item(0).docemail;
+      var docmob=results.rows.item(0).docmob;
+
+      $("#name").html(fn+" "+mn+" "+ln);
+      $("#gender").html(gender);
+      $("#dob").html(dob);
+      $("#pcontactno").html(pcontactno);
+     // $("#scontactno").html(scontactno);
+
+
+      window.localStorage.setItem("id",id);    
+      window.localStorage.setItem("fname",fn);
+      window.localStorage.setItem("mname",mn);
+      window.localStorage.setItem("lname",ln);
+      window.localStorage.setItem("gender",gender);
+      window.localStorage.setItem("dob",dob);
+      window.localStorage.setItem("pcontactno",pcontactno);
+      window.localStorage.setItem("patemail",patemail);
+      window.localStorage.setItem("patpass",patpass);
+      //alert(window.localStorage.getItem("patpass"));
+     // window.localStorage.setItem("pwd",patpass);
+      window.localStorage.setItem("docname",docname);
+      window.localStorage.setItem("docemail",docemail);
+      window.localStorage.setItem("docmob",docmob);
+    
+     /* var dbImage = document.getElementById('myimage');
+      dbImage.style.display = 'block';
+      dbImage.src="data:image/jpeg;base64,"+results.rows.item(0).image;
+      imgdata="data:image/jpeg;base64,"+results.rows.item(0).image;*/
+      
+        var pimage = document.getElementById('myimage');
+    pimage.src =window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+   // imageChanger(id);
+    //alert(window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg");
+      }
+    }
+
+
+     function success(){
+      // alert("sucess");
+     }
+      $("#exitButton,#exitButton1,#exitButton0,#exitButton2").bind('click', function(){
+
+
+              navigator.notification.confirm(
+                        'Do you want to quit',
+                        onConfirmQuit,
+                        'Exit Application',
+                        'OK,Cancel'
+                    );
+
+      });
+
+
+
+    function faddingMessage(e){$.mobile.showPageLoadingMsg("a",e,true);setTimeout($.mobile.hidePageLoadingMsg,2500)}
+    function faddingMessage2(e){$.mobile.showPageLoadingMsg("a",e);setTimeout($.mobile.hidePageLoadingMsg,20000)}
+
+
+    //sensor interfacing
+
+     document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+    //alert("pp");
+
+    //window.localStorage.setItem("first","no");
+
+
+
+    start();
+
+    $.mobile.hidePageLoadingMsg();
+     document.addEventListener("backbutton", function () {
+              navigator.notification.confirm(
+                        'Do you want to quit',
+                        onConfirmQuit,
+                        'Exit Application',
+                        'OK,Cancel'
+                    );
+            }, true);
+
+
+
+      }//);
+
+
+
+
+    function onConfirmQuit(button){
+       if(button == "1"){
+
+
+     // window.CustomNativeAccess.exitapp();
+    }
+  }
+
+
+
+
+
+
+ var bpvaluedia=0;
+ var bpvaluesys=0;
+ var hvalue=0;
+ var svalue=0;
+ var svalue1=0;
+ var svalue2=0;
+    var con1="not connected";
+    var con2="not connected";
+    var con3="not connected";
+    var con4="not connected";
+
+
+
+
+
+    </script>
+  <script src="./js/js/pulseoximeter.js"></script>
+  <script src="./js/js/bp.js"></script>
+    <script src="./js/js/bodyweight.js"></script>
+  <script src="./js/js/thermometer.js"></script>
+  <script src="./js/js/uricacid.js"></script>
+  <script src="./js/js/heartrate.js"></script>
+  <script src="./js/js/ecg.js"></script>
+  <script src="./js/js/cholesterol.js"></script>
+  <script src="./js/js/bs.js"></script>
+
+  </html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+
+      <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="48dp" >
+
+           <!-- title -->
+
+           <TextView
+               android:id="@+id/header"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+               android:text="Measuring Devices List"
+               android:textSize="20dp" />
+
+           <!-- divider -->
+
+           <View
+               android:id="@+id/view1"
+               android:layout_width="match_parent"
+               android:layout_height="4dp"
+               android:layout_alignParentBottom="true"
+               android:layout_marginBottom="2dp"
+               android:background="#DADADC" >
+           </View>
+           
+		<ImageView
+               android:id="@+id/addDeviceBtn"
+               android:layout_width="34dp"
+               android:layout_height="34dp"
+               android:layout_above="@+id/view1"
+               android:layout_alignParentRight="true"
+               android:layout_margin="3dp"
+               android:layout_marginRight="20dp"
+               android:onClick="doClick"
+               android:src="@drawable/add_device_button_selector" />
+       </RelativeLayout>
+ 
+      <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+      
+       >
+     <!--  android:stackFromBottom="true"
+           android:transcriptMode="alwaysScroll"
+            -->
+
+       <ListView
+           android:id="@+id/deviceListview"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_margin="8dp"
+           android:background="#ffffff"
+           android:fastScrollEnabled="true" />
+    
+<!--  
+      <Button
+          android:id="@+id/addDeviceBtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_centerHorizontal="true"
+          android:layout_margin="10dp"
+          android:onClick="doClick"
+          android:text="Add Device" />
+-->
+
+      
+
+   </RelativeLayout>
+      
+
+   
+</LinearLayout>

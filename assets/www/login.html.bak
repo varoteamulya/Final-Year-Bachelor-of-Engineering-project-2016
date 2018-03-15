@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+	
+	    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>mhealth</title>
+		<script src="./js/jquery-1.7.1.min.js"></script>
+	     <script src="./js/hiwi.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+
+		<link rel="stylesheet" href="./js/jquery.mobile-1.3.2.min.css" />
+	    <script src="./js/jquery.mobile-1.3.2.min.js"></script>
+		<link rel="stylesheet" href="css/zoom.css" />
+	</head>
+	<script>
+        function callFaceRecognition(){
+	 		var s=parseInt(window.JSI.createapp());
+	 		alert("Your ID cr() is "+s);
+	 		return s;	
+	 	}
+    </script>
+
+    <body> 
+        <div data-role="page">
+
+	        <div data-role="header" class="ui-header ui-bar-b" role="banner">
+	       		<font size="3">
+	       			<center>
+	       				<h2>mHealth Sign In</h2>
+	       			</center>
+	       		</font>
+	       </div><!-- /header -->
+	        <div data-role="content">
+	            <div class="tab-content">
+	                <div class="patienttab">
+	                	<center>
+	                		<table>
+	                			<col width="150"></col>
+	                			<tr>
+									<input class="button" type="button" id="facerec" value="Sign In" data-inline="true" rel="external"/>
+	                			</tr>
+	                			<tr>
+	                				<td align="center"><input class="button" type="button" id="patient_signup" value="    Sign Up    " data-inline="true" rel="external" name="patient_signup" onclick="javascript:location.href='signupdetails.html'"/></td>
+	                			</tr>
+	                		</table>
+	                		
+	                    	
+	                	</center>
+	                </div> 
+	            </div>
+	        </div><!-- /content -->
+	    </div><!-- /page -->
+    </body>
+    <script type="text/javascript" charset="utf-8">
+	  
+     	var DB_VERSION = "1.0";
+		var DB_NAME = "Database";
+		var DB_DISPLAY_NAME = "Cordova Demo";
+		var DB_SIZE = 20000;
+		var DEBUG=true;
+		 var db;
+		
+        var valid=true;
+      // Wait for Cordova to load
+ //   document.addEventListener("deviceready", onDeviceReady, false);
+
+     // Cordova is ready
+	    function onConfirmQuit(button){
+       if(button == "1"){
+    //  window.CustomNativeAccess.exitapp(); PU 27 Nov 14
+    }
+  }
+  
+
+	 
+	 function populateDB(tx) {
+     tx.executeSql('CREATE TABLE IF NOT EXISTS DETAILS_PATIENT (id INTEGER PRIMARY KEY, fname, mname, lname, gender, dob, pcontactno, patemail, pwd, docname, docemail, docmob)');
+     tx.executeSql('CREATE TABLE IF NOT EXISTS DETAILS_ADMIN (id INTEGER PRIMARY KEY, uname, ademail, pass, type)');     
+     }
+  
+ //   function onDeviceReady() {
+ // on device ready database is connected where all the information of user is stored
+ 	//window.localStorage.clear();
+	db=window.openDatabase (DB_NAME, DB_VERSION, DB_DISPLAY_NAME, DB_SIZE);
+	
+  $(document).ready(function(){   
+ window.CustomNativeAccess.bluetoothconnectioncheck();
+ window.localStorage.setItem("clickID","-1");
+        db.transaction(populateDB, errorCB, success);	
+     });
+   var result_id=0;
+   var result_id_string=0;
+   $("#facerec").live('click', function(){	
+
+   				$.blockUI({message:"<h3>Opening Face Recognition..Please Wait...</h3>",
+   					//timeout:4000,
+				      css: {
+				            border: 'none',
+				            padding: '15px',
+				            backgroundColor: '#000',
+				            '-webkit-border-radius': '10px',
+				            '-moz-border-radius': '10px',
+				            opacity: .5,
+				            color: '#fff'
+				        } 
+				    });
+
+   				//setTimeout(function(){ },4000);
+
+   				//alert('clicked face recog');
+   				result_id=-1;
+				result_id=callFaceRecognition();
+				$.unblockUI();
+		  		//while(result_id==-1);
+		  		//alert("Your id is "+result_id);
+		  		if(result_id!=-1)
+		  			db.transaction(searchId, errorCB, successCB);
+		  		else
+		  			faddingMessage("Face not recognized");
+		  			//alert("Face not recognized");
+
+
+			});
+		
+   		function searchId(tx) {	  
+   				//alert("searching the db");
+   				//result_id=parseInt(window.JSI.createapp()); 
+
+   				//alert("ID String is "+result_id);
+
+			  	//alert('searching for id');
+			 	tx.executeSql('SELECT id FROM DETAILS_PATIENT where id='+result_id, [], querySuccessSearch, errorCB);
+		}
+		function querySuccessSearch(tx,results){
+				//alert('pushing to Java');
+					//var len=results.rows.length;
+									
+					//if(len==1){
+						// var rec_name = ""+results.rows.item(0).fname+" "+results.rows.item(0).lname+"";
+						  window.localStorage.setItem("id",result_id);						  
+						  window.localStorage.setItem("user_type","patient");
+						  //alert("Face Recognition Successful with ID "+result_id);
+						  faddingMessage("Face Recognized Successfully");
+						  var con30=window.CustomNativeAccess.senddatalogin();
+							var valuee=0;
+							while(valuee!=1)
+							{
+								valuee=callnow();
+							}
+							alert("Calling 10");
+							if(valuee==1)
+							{
+								alert("Successsfully Uploaded");
+								document.location.href = "./PatientProfileView.html";
+							}
+							else
+							{
+								alert("UNSuccesssfully");
+							}
+			//	}
+		}
+		
+		
+		function callnow()
+		{
+			alert("Calling 3");
+			var check=window.CustomNativeAccess.checkdata();
+			if(check == "drag")
+			{
+				return 1;
+			}
+		}
+		
+		function successCB(){
+			//alert("Success!");
+		}
+     function success(){  
+      //alert("sucess");
+     }
+    
+     // on Error it returns the error code
+     function errorCB(err) {
+       if(DEBUG)
+      console.log("Error processing SQL: "+err.code);
+	//alert("error1");
+     }     
+
+		function faddingMessage(e){$.mobile.showPageLoadingMsg("a",e,true);setTimeout($.mobile.hidePageLoadingMsg,2500)}
+	  
+    </script>	
+
+</html>

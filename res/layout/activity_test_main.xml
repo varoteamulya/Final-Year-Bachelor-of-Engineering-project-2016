@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp" >
+	
+	<ImageView 
+        android:id="@+id/backBtn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/back_button_selector"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="3dp"
+        android:onClick="doClick"
+        /> 
+        <!-- title -->
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Device Info"
+            android:textSize="20dp" />
+
+        <!-- divider -->
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:background="#DADADC" >
+        </View>
+
+        <!-- 
+            <ImageView
+            android:id="@+id/setTypeBtn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_above="@+id/view1"
+            android:layout_alignParentRight="true"
+            android:layout_margin="3dp"
+            android:layout_marginRight="20dp"
+            android:onClick="doClick"
+            android:src="@drawable/setting_button_selector" />
+        -->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tGetDataBtn"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:background="#ffffff"
+            android:fastScrollEnabled="true"
+            android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/tPairedBtn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView"
+        android:layout_margin="5dp"
+        android:background="@drawable/selector_single_button"
+        android:onClick="doClick"
+        android:text="Pair Device"
+        android:textColor="@drawable/selector_single_button_text" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:background="#DADADC" />
+
+    <Button
+        android:id="@+id/tGetDataBtn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/tPairedBtn"
+        android:layout_alignBottom="@+id/tPairedBtn"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_margin="1dp"
+        android:background="@drawable/selector_single_button"
+        android:onClick="doClick"
+        android:text="Upgrade"
+        android:textColor="@drawable/selector_single_button_text" />
+    
+    </RelativeLayout>
+
+    
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp" >
+
+        <!-- title -->
+
+        <TextView
+            android:id="@+id/showDetailsheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Generic_Fat_Device"
+            android:textSize="20dp" />
+
+        <!-- divider -->
+
+        <ImageView
+            android:id="@+id/showDetailsActivity_backBtn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dp"
+            android:onClick="doClick"
+            android:src="@drawable/back_button_selector" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:background="#DADADC" >
+        </View>
+
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    
+        <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/connectBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+        
+        <Button
+            android:id="@+id/connectBtn"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector_single_button"
+            android:text="Connect"
+            android:textColor="@drawable/selector_single_button_text" />
+
+		<!-- 
+        <Button
+            android:id="@+id/disconnectBtn"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector_single_button"
+            android:text="Disconnect"
+            android:textColor="@drawable/selector_single_button_text" />
+		-->
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/infoTextView"
+            android:layout_marginBottom="10dp"
+            android:background="#DADADC" />
+    </RelativeLayout>
+
+</LinearLayout>

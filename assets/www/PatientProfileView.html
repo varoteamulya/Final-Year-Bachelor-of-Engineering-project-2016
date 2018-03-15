@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<style>
+			ul
+			{
+				list-type: none;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			body
+			{
+				background-color:#f8f8f8;
+				margin: 30px 0 0 0;
+			}
+			ul
+			{
+				list-type: none;
+				list-style: none;
+				padding: 0;
+				margin: 0;	
+			}
+
+			.ui-block-a,
+			.ui-block-b,
+			.ui-block-c
+			{
+				height: 100%;
+				font-weight: bold;
+				text-align: center;
+				padding:10px;
+			}
+		</style>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name="viewport" content="width=device-width,height=device-height, initial-sdistancee=1" />
+		<title>mHealth</title>
+		<script src="./js/online.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+		<link rel="stylesheet" href="./js/jquery.mobile-1.3.2.min.css" />
+		<script src="./js/jquery-1.10.2.min.js"></script>
+		<script src="./js/jquery.mobile-1.3.2.min.js"></script>
+		<script type="text/javascript" src="./js/canvasjs.min.js"></script>
+		<script src="./js/hl7.js"></script>
+		<script src="./js/knockout-3.0.0.js"></script>
+		<script src="./js/globalize.min.js"></script>
+		<script src="./js/j_P_1.1.js"></script>
+		<script src="./js/dx.chartjs.js"></script>
+		<script src="./js/hiwi.js"></script>
+		<script src="./js/jquery.cycle.all.js"></script>
+		
+		<script>
+			var Blur_flag = 0;
+
+			function Blur_Page()
+			{
+				$("#Cloud_Id").foggy({
+					blurRadius: 5,          // In pixels.
+					opacity: 0.5,           // Falls back to a filter for IE.
+					cssFilterSupport: true  // Use "-webkit-filter" where available.
+				});
+				$("#fetchfromcloud").attr("disabled","disabled");
+			}
+
+			function Un_Blur_Page()
+			{
+				$("#Cloud_Id").foggy(false);
+				$("#fetchfromcloud").removeAttr("disabled");
+			}
+
+			$(document).ready(function()
+			{
+				$("body").click(function()
+				{
+					if(Blur_flag == 0)
+						Un_Blur_Page();
+					else
+						Blur_flag = 0;
+				});
+			});
+
+			$(document).ready(function()
+			{
+				$("#fetchfromcloud").click(function(e)
+				{
+					if($("#fetchfromcloud").attr("disabled")=="disabled")
+						e.preventDefault();
+				});
+			});
+		</script>
+	</head>
+	<body>
+	
+		<div data-role="page" id="home" data-pagination="1" >
+			<div data-role="header" data-theme="b" style="overflow:hidden;">
+				<h1>CLIENT</h1>
+			</div>
+			<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+			<div data-role="content">
+
+				<div class="ui-grid-b springboard">
+					<div id="PULSE_OXIMETER_Id_1" class="ui-block-b ">
+						<a id="logout" href="#" data-transition="slide" data-role="none" data-prefetch data-dom-cache="true" >
+							<img src="./images/logout.png" id="logout12" width="40%" height="auto" />
+						</a>
+					</div>
+					<div id="PULSE_OXIMETER_Id_1" class="ui-block-b ">
+						<a id="autoo" href="#" data-transition="slide" data-role="none" data-prefetch data-dom-cache="true" >
+							<img src="./images/bp.png" id="autoo1" width="40%" height="auto" />
+						</a>
+					</div>
+					<div id="Cloud_Id" class="ui-block-b ">
+						<a id="cloud" href="#" data-transition="slide" data-role="none" data-prefetch data-dom-cache="true" >
+							<img src="./images/final/Cloud.png"  width="60%" height="auto" />
+						</a> 
+					</div>
+					<!-- Vijay 
+					<div id="Cloud_Id1" class="ui-block-b ">
+						<a id="cloud1" href="#" data-transition="slide" data-role="none" data-prefetch data-dom-cache="true" >
+							<img src="./images/final/Cloud.png"  width="60%" height="auto" />
+						</a> 
+					</div>-->
+				</div>
+			</div>
+		</div>
+<!-- fetching from cloud-->
+		<div data-role="page" id="fetch_cloud" data-pagination="2" > 
+			<div data-role="header" class="ui-header ui-bar-b" role="banner" data-theme="b" style="overflow:hidden;">
+				<div data-role="header" data-theme="b" style="overflow:hidden;">
+					<h1> GDV mHealth Cloud</h1>
+					<a href="#home" id="logout1" data-icon="home"> Back to App </a>
+				</div>
+			</div>
+			<img  id="fetchdata" onClick="fetch_data();" style="position:absolute;margin:0 auto; height:auto; width:430px;left:150px;top:200px;border-style:none; border-color:#598fce;border-radius: 70px;" src="images/cldd.png" />
+			<img  id="fetchgraph" onClick="fetch_chart();" style="position:absolute; margin:0 auto; height:auto; width:430px;left:770px;top:200px; border-style:none; border-color:#598fce; border-radius: 70px;" src="images/cldg.png" />
+		</div>
+	</body>
+<script>
+    var DB_VERSION = "1.0";
+    var DB_NAME = "Database";
+    var DB_DISPLAY_NAME = "Cordova Demo";
+    var DB_SIZE = 20000;
+    var DEBUG=true;
+    var db=window.openDatabase (DB_NAME, DB_VERSION, DB_DISPLAY_NAME, DB_SIZE);
+    var imgdata;
+
+	$( document ).bind( 'mobileinit', function()
+	{
+		$.mobile.loader.prototype.options.text = "loading";
+		$.mobile.loader.prototype.options.textVisible = false;
+		$.mobile.loader.prototype.options.theme = "c";
+		$.mobile.loader.prototype.options.html = "";
+	});
+
+	function changeProfile()
+	{
+		window.localStorage.setItem("user","pat"); 
+	}
+
+    $("#logout").bind('click', function()
+	{
+		var user_type=window.localStorage.getItem("user_type");
+		if(user_type=="admin")
+			document.location.href="./login.html";
+		else
+			document.location.href="./login.html";
+    });
+
+	function fetch_data()
+	{
+        document.location.href="http://mhealthcloud.elasticbeanstalk.com/healthdatacloud.jsp?pat_id="+window.localStorage.getItem("patemail");
+	}
+	
+	function fetch_chart()
+	{
+        document.location.href="http://mhealthcloud.elasticbeanstalk.com/chartcloud.jsp?pat_id="+window.localStorage.getItem("patemail");
+	}
+	
+    function start() 
+	{
+		db.transaction(search, errorCB, success);
+    }
+
+    function errorCB(err) 
+	{
+		if(DEBUG)
+		console.log("Error processing SQL: "+err.code);
+    }
+
+    function search(tx) 
+	{
+		var id=window.localStorage.getItem("id");
+        tx.executeSql('SELECT * FROM DETAILS_PATIENT where id='+id, [], querySuccess, errorCB);
+    }
+
+    function querySuccess(tx, results) 
+	{
+		var len = results.rows.length;
+		if(len==0)
+			alert("You have not signed up!, please sign up!");
+		else
+		{ 
+			var id;     
+			id=results.rows.item(0).id;
+			fn=results.rows.item(0).fname;
+			mn=results.rows.item(0).mname;
+			ln=results.rows.item(0).lname;
+			var gender=results.rows.item(0).gender;
+			var dob=results.rows.item(0).dob;
+			var pcontactno=results.rows.item(0).pcontactno;
+			var patemail=results.rows.item(0).patemail;
+			var patpass=results.rows.item(0).pwd;
+			var docname=results.rows.item(0).docname;
+			var docemail=results.rows.item(0).docemail;
+			var docmob=results.rows.item(0).docmob;
+			window.localStorage.setItem("id",id);    
+			window.localStorage.setItem("fname",fn);
+			window.localStorage.setItem("mname",mn);
+			window.localStorage.setItem("lname",ln);
+			window.localStorage.setItem("gender",gender);
+			window.localStorage.setItem("dob",dob);
+			window.localStorage.setItem("pcontactno",pcontactno);
+			window.localStorage.setItem("patemail",patemail);
+			window.localStorage.setItem("patpass",patpass);
+			window.localStorage.setItem("docname",docname);
+			window.localStorage.setItem("docemail",docemail);
+			window.localStorage.setItem("docmob",docmob);
+			var pimage = document.getElementById('myimage');
+			pimage.src =window.JSI.getExternalPath()+ "/GDVFaces/"+id+".jpg";
+		}
+    }
+
+    function success(){}
+	 
+    $("#exitButton,#exitButton1,#exitButton0,#exitButton2").bind('click', function(){
+            navigator.notification.confirm(
+					'Do you want to quit',
+                    onConfirmQuit,
+                    'Exit Application',
+                    'OK,Cancel'
+                    );
+    });
+
+    function faddingMessage(e)
+	{
+		$.mobile.showPageLoadingMsg("a",e,true);
+		setTimeout($.mobile.hidePageLoadingMsg,2500)
+	}
+    function faddingMessage2(e)
+	{
+		$.mobile.showPageLoadingMsg("a",e);
+		setTimeout($.mobile.hidePageLoadingMsg,20000)
+	}
+    document.addEventListener("deviceready", onDeviceReady, false);
+	
+    function onDeviceReady() 
+	{
+		start();
+		$.mobile.hidePageLoadingMsg();
+		document.addEventListener("backbutton", function () {
+              navigator.notification.confirm(
+                        'Do you want to quit',
+                        onConfirmQuit,
+                        'Exit Application',
+                        'OK,Cancel'
+                    );
+            }, true);
+    }
+	
+    function onConfirmQuit(button){}
+  
+	var bpvaluedia=0;
+	var bpvaluesys=0;
+	var hvalue=0;
+	var svalue=0;
+	var svalue1=0;
+	var svalue2=0;
+    var con1="not connected";
+    var con2="not connected";
+    var con3="not connected";
+    var con4="not connected";
+    </script>
+	<script src="./js/js/automated.js"></script>
+</html>

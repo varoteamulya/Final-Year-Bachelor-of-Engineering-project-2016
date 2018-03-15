@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/broadcastTypeText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="BroadcastType" >
+    </TextView>
+
+    <Spinner
+        android:id="@+id/broadcastSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+    </Spinner>
+
+    <TextView
+        android:id="@+id/spinnerText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="DeviceType" >
+    </TextView>
+
+    <lifesense.ble.test.ui.MultiSpinner
+         android:id="@+id/deviceTypeSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+    </lifesense.ble.test.ui.MultiSpinner>
+
+</LinearLayout>
